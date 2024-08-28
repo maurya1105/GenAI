@@ -1,0 +1,20 @@
+@keyframes temptest {
+    0%{
+        opacity: 0;
+        
+    }
+    100%{
+        opacity:1
+    }
+    
+}
+@keyframes second {
+    0%{display:none}
+    100%{
+        display:none;
+    }
+    
+}
+.clas{
+    animation: temptest  1s linear 0s 1 forwards , temptest  1s linear 0s 1 forwards;
+}

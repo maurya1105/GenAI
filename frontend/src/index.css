@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'CustomFont';
+  src: url(./fonts/FuturaCyrillicExtraBold.ttf);
+  
+}
+
+/* width */
+
+::-webkit-scrollbar  {
+  width: 5px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+strong {
+  color: #cdd4fc;
+}
+ol {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+li {
+  margin-top: 10px;
+  list-style-type: disc;
+  margin-left: 32px;
+}
+table {
+  width: 100%;
+  border-collapse:collapse;
+  outline: 2px solid rgb(59, 66, 82);
+  border: 2px solid rgb(59, 66, 82);
+  padding: 10px;
+  gap: 10px;
+}
+
+th,
+td {
+  padding: 10px;  
+  border: 3px solid rgb(59, 66, 82);
+  outline: 2px solid rgb(59, 66, 82);
+  outline-offset: -2px;
+  border-radius: 5px;
+  text-align: center;
+}
+th{
+  background-color: rgb(59, 66, 82);
+}
+
+
+#appbg{
+  background-color: #2E3440;
+    
+}
+
+.textfade {
+  animation-duration: 1.5s;
+  animation-name: slide-right-fast;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.hide {
+  animation-duration: 3s;
+  animation-name: slide-right-slow;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+
+
+.logo {
+  animation-duration: 0.8s;
+  animation-name: fade-down;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+.mbox {
+  animation-duration: 1.5s;
+  animation-name: fade-up;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.fadein {
+  animation-duration: 0.8s;
+  animation-name: fade-up;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+
+.glisten {
+  color: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+      135deg,
+      rgb(216, 222, 233) 0%,
+      rgb(216, 222, 233) 47.5%,
+      rgb(76, 86, 106) 50%,
+      rgb(216, 222, 233) 52.5%,
+      rgb(216, 222, 233) 100%
+    );
+  animation: gradient-glisten 6s linear 5s infinite;
+}
+
+
+
+@keyframes slide-right-fast {
+  0% {
+    margin-left: -80px;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+@keyframes slide-right-slow {
+  0% {
+    display: block;
+    margin-left: -160px;
+    padding-left: 320px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  100% {
+    display: block;
+    margin-left: 100%;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@keyframes color-fade-in {
+  0% {
+    color: #ddd;
+  }
+  50% {
+    color: #ddd;
+  }
+  100% {
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    margin-top: -50px;
+    opacity: -2;
+  }
+
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    margin-top: -36px;
+    }
+    50% {
+      
+      margin-top: 0px;
+    }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-glisten {
+  0% {
+    -webkit-text-fill-color: transparent;
+    background-size: 600% 600%;
+    background-position: 100%;
+  }
+  50% {
+    -webkit-text-fill-color: transparent;
+    background-size: 600% 600%;
+    background-position: 50%;
+  }
+  100% {
+    -webkit-text-fill-color: transparent;
+    background-size: 600% 600%;
+    background-position: 0%;
+  }
+}

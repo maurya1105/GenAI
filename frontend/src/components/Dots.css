@@ -1,0 +1,20 @@
+.dots {
+    scale: 0.4;
+    animation-duration: 3s;
+    animation-name: scale-up-down;
+    animation-iteration-count: infinite;
+    
+  }
+  @keyframes scale-up-down {
+    from {
+      scale: 0.4;
+    }
+  
+    50% {
+      scale: 1;
+    }
+  
+    to {
+      scale: 0.4;
+    }
+  }
