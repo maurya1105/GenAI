@@ -4,10 +4,8 @@
 backup
 chroma
 data
-faiss_index
 /frontend/node_modules
 /frontend/patches
 /frontend/patches
 backend/user-activity.log
-/backend/faiss_index_tbl
 backend/esops_documents.json
