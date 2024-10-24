@@ -9,7 +9,7 @@ import time
 import os
 
 #Change query function here
-from query_data_dummy  import query_rag
+from query_faiss import query_rag
 
 app = Flask(__name__)
 cors=CORS(app)
