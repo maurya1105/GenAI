@@ -1,0 +1,394 @@
+---------------------------------------------------------------------------
+Use the below tables when asked to create/configure a CIS Division.
+
+Output 6 insert queries for the 6 tables below with their respective fields when asked to configure CIS Division (Customer Informatio Systems Division).
+
+Table 'CI_CIS_DIVISION' is used for storing CIS Division. Table 'CI_CIS_DIVISION' has 13 fields (columns) which are:  1. 'CIS_DIVISION' 2. 'CALENDAR_CD' 3. 'VERSION' 4. 'BUS_OBJ_CD' 5. 'CUST_CL_CD_BUS' 6. 'CUST_CL_CD_PER' 7. 'START_CASH_ONL_PTS' 8. 'START_CR_RAT_PTS' 9. 'CASH_ONLY_PTS_THRS' 10. 'CR_RAT_THRS' 11. 'OVRD_CRRT_CASH_SW' 12. 'CIS_DIV_DATA_AREA' 13. 'CIS_DIV_RESTRICT_FLG'. Out of these fields, only one is a primary key; 'CIS_DIVISION' is the primary key for 'CI_CIS_DIVISION'. 
+Table 'CI_CIS_DIVISION' has 4 foreign keys as listed:  'CALENDAR_CD' is foreign key from table 'CI_CAL_WORK', 'CUST_CL_CD_BUS' is foreign key from table 'CI_CUST_CL', 'BUS_OBJ_CD' is foreign key from table 'F1_BUS_OBJ', and 'CUST_CL_CD_PER' is foreign key from table 'CI_CUST_CL'.
+'CI_CIS_DIVISION' is a Primary Table.
+
+Field Descriptions for table 'CI_CIS_DIVISION':
+
+  1. 'CIS_DIVISION' (CHAR):- field name for CIS Division
+  2. 'CALENDAR_CD' (CHAR):- field name for Work Calendar
+  3. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default': 99999
+  4. 'BUS_OBJ_CD' (CHAR):- field name for Business Object
+  5. 'CUST_CL_CD_BUS' (CHAR):- field name for Customer Class (Business), 'nullable': True
+  6. 'CUST_CL_CD_PER' (CHAR):- field name for Customer Class (Person), 'nullable': True
+  7. 'START_CASH_ONL_PTS' (NUMBER):- field name for Beginning Cash-Only Score,  'precision': 5, 'nullable': True
+  8. 'START_CR_RAT_PTS' (NUMBER):- field name for Beginning Credit Rating,  'precision': 5, 'nullable': True
+  9. 'CASH_ONLY_PTS_THRS' (NUMBER):- field name for Cash-Only Threshold,  'precision': 5, 'nullable': True
+  10. 'CR_RAT_THRS' (NUMBER):- field name for Credit Rating Threshold,  'precision': 5, 'nullable': True
+  11. 'OVRD_CRRT_CASH_SW' (CHAR):- field name for Override Credit Rating/Cash Only, 'nullable': True
+  12. 'CIS_DIV_DATA_AREA' (CLOB):- field name for CIS_DIV_DATA_AREA, 'nullable': True
+  13. 'CIS_DIV_RESTRICT_FLG' (CHAR):- field name for Restrict to Account CIS Division
+
+The child tables of 'CI_CIS_DIVISION' are ['C1_CIS_DIV_RTYP', 'CI_CIS_DIVISION_L', 'CI_DIV_TD_ROLE', 'C1_CIS_DIV_SEQ_CHAR', 'CI_CIS_DIV_CHAR']. 
+(Generated when 'MAINT_OBJ_CD'=CIS DIVISION)
+
+--------------------------------------------------------------------------
+
+Table 'CI_CIS_DIVISION_L' is used for storing CIS Division Language. Table 'CI_CIS_DIVISION_L' has 4 fields (columns) which are:  1. 'CIS_DIVISION' 2. 'LANGUAGE_CD' 3. 'VERSION' 4. 'DESCR'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'CIS_DIVISION'  2. 'LANGUAGE_CD' . 
+Table 'CI_CIS_DIVISION_L' has 2 foreign keys as listed:  'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE', and 'CIS_DIVISION' is foreign key from table 'CI_CIS_DIVISION'.
+'CI_CIS_DIVISION_L' is a child table of 'CI_CIS_DIVISION' table.
+
+Field Descriptions for table 'CI_CIS_DIVISION_L':
+
+  1. 'CIS_DIVISION' (CHAR):- field name for CIS Division
+  2. 'LANGUAGE_CD' (CHAR):- field name for Language
+  3. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default': 99999
+  4. 'DESCR' (VARCHAR2):- field name for Description
+  
+--------------------------------------------------------------------------
+
+Table 'C1_CIS_DIV_RTYP' is used for storing CIS Division Route Type. Table 'C1_CIS_DIV_RTYP' has 14 fields (columns) which are:  1. 'CIS_DIVISION' 2. 'BILL_RTE_TYPE_CD' 3. 'QTE_RTE_TYPE_CD' 4. 'OVRD_BATCH_CD' 5. 'RT_TYPE_ALG_ENT_FLG' 6. 'OVRD_EXTRACT_ALG_CD' 7. 'VERSION' 8. 'OVRD_CO_ID' 9. 'ENCR_OVRD_CO_ID' 10. 'OVRD_CO_NAME' 11. 'OVRD_CO_ENTITY_DESCR' 12. 'OVRD_TNDR_SOURCE_CD' 13. 'APAY_RTE_TYPE_CD' 14. 'OVRD_WEB_DEBIT_ACCT_VAL_ALG_CD'. Out of these fields, 4 are primary keys. The composite primary keys are:  1. 'CIS_DIVISION'  2. 'QTE_RTE_TYPE_CD'  3. 'BILL_RTE_TYPE_CD'  4. 'APAY_RTE_TYPE_CD' . 
+Table 'C1_CIS_DIV_RTYP' has 8 foreign keys as listed:  'OVRD_BATCH_CD' is foreign key from table 'CI_BATCH_CTRL', 'QTE_RTE_TYPE_CD' is foreign key from table 'CI_QTE_RTE_TYPE', 'BILL_RTE_TYPE_CD' is foreign key from table 'CI_BILL_RT_TYPE', 'CIS_DIVISION' is foreign key from table 'CI_CIS_DIVISION', 'OVRD_EXTRACT_ALG_CD' is foreign key from table 'CI_ALG', 'OVRD_TNDR_SOURCE_CD' is foreign key from table 'CI_TNDR_SRCE', 'APAY_RTE_TYPE_CD' is foreign key from table 'CI_APAY_RT_TYPE', and 'OVRD_WEB_DEBIT_ACCT_VAL_ALG_CD' is foreign key from table 'CI_ALG'.
+'C1_CIS_DIV_RTYP' is a child table of 'CI_CIS_DIVISION' table.
+
+Field Descriptions for table 'C1_CIS_DIV_RTYP':
+
+  1. 'CIS_DIVISION' (CHAR):- field name for CIS Division
+  2. 'BILL_RTE_TYPE_CD' (CHAR):- field name for Bill Route Type
+  3. 'QTE_RTE_TYPE_CD' (CHAR):- field name for Quote Route Type
+  4. 'OVRD_BATCH_CD' (CHAR):- field name for Override Batch Control, 'nullable': True
+  5. 'RT_TYPE_ALG_ENT_FLG' (CHAR):- field name for Algorithm Entity, 'nullable': True
+  6. 'OVRD_EXTRACT_ALG_CD' (CHAR):- field name for Override Extract Algorithm, 'nullable': True
+  7. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default': 99999
+  8. 'OVRD_CO_ID' (CHAR):- field name for Override Company Id, 'nullable': True
+  9. 'ENCR_OVRD_CO_ID' (VARCHAR2):- field name for Encrypted Override Company Id, 'nullable': True
+  10. 'OVRD_CO_NAME' (VARCHAR2):- field name for Override Company Name, 'nullable': True
+  11. 'OVRD_CO_ENTITY_DESCR' (CHAR):- field name for Override Company Entity Description, 'nullable': True
+  12. 'OVRD_TNDR_SOURCE_CD' (CHAR):- field name for Override Tender Source, 'nullable': True
+  13. 'APAY_RTE_TYPE_CD' (CHAR):- field name for Auto Pay Route Type
+  14. 'OVRD_WEB_DEBIT_ACCT_VAL_ALG_CD' (CHAR):- field name for Web Debit Acct Validation Algorithm, 'nullable': True
+
+--------------------------------------------------------------------------
+
+Table 'CI_DIV_TD_ROLE' is used for storing CIS Division To Do Role. Table 'CI_DIV_TD_ROLE' has 4 fields (columns) which are:  1. 'TD_TYPE_CD' 2. 'CIS_DIVISION' 3. 'ROLE_ID' 4. 'VERSION'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'CIS_DIVISION'  2. 'TD_TYPE_CD' . 
+Table 'CI_DIV_TD_ROLE' has 4 foreign keys as listed:  'ROLE_ID' is foreign key from table 'CI_ROLE', 'CIS_DIVISION' is foreign key from table 'CI_CIS_DIVISION', 'TD_TYPE_CD' is foreign key from table 'CI_TD_TYPE', and 'TD_TYPE_CD' is foreign key from table 'CI_TD_VAL_ROLE'.
+'CI_DIV_TD_ROLE' is a child table of 'CI_CIS_DIVISION' table.
+
+Field Descriptions for table 'CI_DIV_TD_ROLE':
+
+  1. 'TD_TYPE_CD' (CHAR):- field name for To Do Type
+  2. 'CIS_DIVISION' (CHAR):- field name for CIS Division
+  3. 'ROLE_ID' (CHAR):- field name for To Do Role
+  4. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default': 99999
+
+--------------------------------------------------------------------------
+
+Table 'C1_CIS_DIV_SEQ_CHAR' is used for storing CIS Division Sequential Characteristics. Table 'C1_CIS_DIV_SEQ_CHAR' has 12 fields (columns) which are:  1. 'CIS_DIVISION' 2. 'CHAR_TYPE_CD' 3. 'SEQ_NUM' 4. 'CHAR_VAL' 5. 'ADHOC_CHAR_VAL' 6. 'CHAR_VAL_FK1' 7. 'CHAR_VAL_FK2' 8. 'CHAR_VAL_FK3' 9. 'CHAR_VAL_FK4' 10. 'CHAR_VAL_FK5' 11. 'VERSION' 12. 'SRCH_CHAR_VAL'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'CIS_DIVISION'  2. 'CHAR_TYPE_CD'  3. 'SEQ_NUM' . 
+Table 'C1_CIS_DIV_SEQ_CHAR' has 3 foreign keys as listed:  'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_VAL', 'CIS_DIVISION' is foreign key from table 'CI_CIS_DIVISION', and 'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_TYPE'.
+'C1_CIS_DIV_SEQ_CHAR' is a child table of 'CI_CIS_DIVISION' table.
+
+Field Descriptions for table 'C1_CIS_DIV_SEQ_CHAR':
+
+  1. 'CIS_DIVISION' (CHAR):- field name for CIS Division
+  2. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type
+  3. 'SEQ_NUM' (NUMBER):- field name for Sequence,  'precision': 3, 'nullable': False
+  4. 'CHAR_VAL' (CHAR):- field name for Characteristic Value, 'nullable': True
+  5. 'ADHOC_CHAR_VAL' (VARCHAR2):- field name for Adhoc Characteristic Value, 'nullable': True
+  6. 'CHAR_VAL_FK1' (VARCHAR2):- field name for Characteristic Value FK 1, 'nullable': True
+  7. 'CHAR_VAL_FK2' (VARCHAR2):- field name for Characteristic Value FK 2, 'nullable': True
+  8. 'CHAR_VAL_FK3' (VARCHAR2):- field name for Characteristic Value FK 3, 'nullable': True
+  9. 'CHAR_VAL_FK4' (VARCHAR2):- field name for Characteristic Value FK 4, 'nullable': True
+  10. 'CHAR_VAL_FK5' (VARCHAR2):- field name for Characteristic Value FK 5, 'nullable': True
+  11. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default': 99999
+  12. 'SRCH_CHAR_VAL' (VARCHAR2):- field name for Search Characteristic Value, 'nullable': True
+
+--------------------------------------------------------------------------
+
+Table 'CI_CIS_DIV_CHAR' is used for storing CIS Division Eff Dated Characteristics. Table 'CI_CIS_DIV_CHAR' has 11 fields (columns) which are:  1. 'CIS_DIVISION' 2. 'CHAR_TYPE_CD' 3. 'EFFDT' 4. 'CHAR_VAL' 5. 'VERSION' 6. 'ADHOC_CHAR_VAL' 7. 'CHAR_VAL_FK1' 8. 'CHAR_VAL_FK2' 9. 'CHAR_VAL_FK3' 10. 'CHAR_VAL_FK4' 11. 'CHAR_VAL_FK5'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'CIS_DIVISION'  2. 'CHAR_TYPE_CD'  3. 'EFFDT' . 
+Table 'CI_CIS_DIV_CHAR' has 3 foreign keys as listed:  'CIS_DIVISION' is foreign key from table 'CI_CIS_DIVISION', 'CHAR_VAL' is foreign key from table 'CI_CHAR_VAL', and 'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_TYPE'.
+'CI_CIS_DIV_CHAR' is a child table of 'CI_CIS_DIVISION' table.
+
+Field Descriptions for table 'CI_CIS_DIV_CHAR':
+
+  1. 'CIS_DIVISION' (CHAR):- field name for CIS Division
+  2. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type
+  3. 'EFFDT' (DATE):- field name for Effective Date
+  4. 'CHAR_VAL' (CHAR):- field name for Characteristic Value
+  5. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default': 99999
+  6. 'ADHOC_CHAR_VAL' (VARCHAR2):- field name for Adhoc Characteristic Value
+  7. 'CHAR_VAL_FK1' (VARCHAR2):- field name for Characteristic Value FK 1
+  8. 'CHAR_VAL_FK2' (VARCHAR2):- field name for Characteristic Value FK 2
+  9. 'CHAR_VAL_FK3' (VARCHAR2):- field name for Characteristic Value FK 3
+  10. 'CHAR_VAL_FK4' (VARCHAR2):- field name for Characteristic Value FK 4
+  11. 'CHAR_VAL_FK5' (VARCHAR2):- field name for Characteristic Value FK 5
+
+The above tables will be used specifically for configuration of CIS Division. A CIS division is associated with a jurisdiction. The definition of a jurisdiction is a geographic-oriented entity with unique business rules.
+
+---------------------------------------------------------------------------
+
+Table 'CI_COUNTRY' is used for storing Country format usage flags and availability values. Table 'CI_COUNTRY' has 28 fields (columns) which are:  1. 'CITY_AVAIL' 2. 'VERSION' 3. 'NUM1_AVAIL' 4. 'NUM2_AVAIL' 5. 'HOUSE_TYPE_AVAIL' 6. 'COUNTY_AVAIL' 7. 'STATE_AVAIL' 8. 'POSTAL_AVAIL' 9. 'IN_CITY_LIM_AVAIL' 10. 'GEO_CODE_AVAIL' 11. 'ADDR1_USG_FLG' 12. 'ADDR2_USG_FLG' 13. 'ADDR3_USG_FLG' 14. 'ADDR4_USG_FLG' 15. 'CITY_USG_FLG' 16. 'COUNTY_USG_FLG' 17. 'GEO_CODE_USG_FLG' 18. 'HOUSE_TYPE_USG_FLG' 19. 'IN_CITY_LIM_USG_FLG' 20. 'NUM1_USG_FLG' 21. 'NUM2_USG_FLG' 22. 'POSTAL_USG_FLG' 23. 'STATE_USG_FLG' 24. 'COUNTRY' 25. 'ADDR1_AVAIL' 26. 'ADDR2_AVAIL' 27. 'ADDR3_AVAIL' 28. 'ADDR4_AVAIL'. Out of these fields, only one is a primary key; 'COUNTRY' is the primary key for 'CI_COUNTRY'
+'CI_COUNTRY' is a Primary Table.
+
+Field Descriptions for table 'CI_COUNTRY':
+
+  1. 'COUNTRY' (CHAR):- field name for Country,  'precision': None
+  2. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, default: 99999
+  3. 'NUM1_AVAIL' (CHAR):- field name for Number 1,  'precision': None
+  4. 'NUM2_AVAIL' (CHAR):- field name for Number 2,  'precision': None
+  5. 'HOUSE_TYPE_AVAIL' (CHAR):- field name for House Type,  'precision': None
+  6. 'COUNTY_AVAIL' (CHAR):- field name for County,  'precision': None
+  7. 'CITY_AVAIL' (CHAR):- field name for City,  'precision': None
+  8. 'STATE_AVAIL' (CHAR):- field name for State,  'precision': None
+  9. 'POSTAL_AVAIL' (CHAR):- field name for Postal,  'precision': None
+  10. 'IN_CITY_LIM_AVAIL' (CHAR):- field name for In City Limit,  'precision': None
+  11. 'ADDR1_AVAIL' (CHAR):- field name for Address 1,  'precision': None
+  12. 'ADDR2_AVAIL' (CHAR):- field name for Address 2,  'precision': None
+  13. 'ADDR3_AVAIL' (CHAR):- field name for Address 3,  'precision': None
+  14. 'ADDR4_AVAIL' (CHAR):- field name for Address 4,  'precision': None
+  15. 'GEO_CODE_AVAIL' (CHAR):- field name for Geographic Code,  'precision': None
+  16. 'ADDR1_USG_FLG' (CHAR):- field name for Address 1 Usage,  'precision': None
+  17. 'ADDR2_USG_FLG' (CHAR):- field name for Address 2 Usage,  'precision': None
+  18. 'ADDR3_USG_FLG' (CHAR):- field name for Address 3 Usage,  'precision': None
+  19. 'ADDR4_USG_FLG' (CHAR):- field name for Address 4 Usage,  'precision': None
+  20. 'CITY_USG_FLG' (CHAR):- field name for City Usage,  'precision': None
+  21. 'COUNTY_USG_FLG' (CHAR):- field name for County Usage,  'precision': None
+  22. 'GEO_CODE_USG_FLG' (CHAR):- field name for Geographic Code Usage,  'precision': None
+  23. 'HOUSE_TYPE_USG_FLG' (CHAR):- field name for House Type Usage,  'precision': None
+  24. 'IN_CITY_LIM_USG_FLG' (CHAR):- field name for In City Limit Usage,  'precision': None
+  25. 'NUM1_USG_FLG' (CHAR):- field name for Number 1 Usage,  'precision': None
+  26. 'NUM2_USG_FLG' (CHAR):- field name for Number 2 Usage,  'precision': None
+  27. 'POSTAL_USG_FLG' (CHAR):- field name for Postal Usage,  'precision': None
+  28. 'STATE_USG_FLG' (CHAR):- field name for State Usage,  'precision': None
+
+
+The child tables of 'CI_COUNTRY' are ['CI_STATE_L', 'CI_STATE', 'CI_COUNTRY_L']. 
+(Generated when 'MAINT_OBJ_CD'=COUNTRY)
+
+--------------------------------------------------------------------------
+
+Table 'CI_COUNTRY_L' is used for storing Country address format labels. Table 'CI_COUNTRY_L' has 17 fields (columns) which are:  1. 'COUNTRY' 2. 'LANGUAGE_CD' 3. 'DESCR' 4. 'ADDR1_LBL' 5. 'ADDR2_LBL' 6. 'ADDR3_LBL' 7. 'ADDR4_LBL' 8. 'CITY_LBL' 9. 'NUM1_LBL' 10. 'NUM2_LBL' 11. 'HOUSE_TYPE_LBL' 12. 'COUNTY_LBL' 13. 'STATE_LBL' 14. 'POSTAL_LBL' 15. 'IN_CITY_LIM_LBL' 16. 'GEO_CODE_LBL' 17. 'VERSION'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'LANGUAGE_CD'  2. 'COUNTRY' . 
+Table 'CI_COUNTRY_L' has 2 foreign keys as listed:  'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE', and 'COUNTRY' is foreign key from table 'CI_COUNTRY'.
+'CI_COUNTRY_L' is a child table of 'CI_COUNTRY' table.
+
+Field Descriptions for table 'CI_COUNTRY_L':
+
+  1. 'COUNTRY' (CHAR):- field name for Country,  'precision': None
+  2. 'LANGUAGE_CD' (CHAR):- field name for Language,  'precision': None
+  3. 'DESCR' (VARCHAR2):- field name for Description,  'precision': None
+  4. 'ADDR1_LBL' (VARCHAR2):- field name for Address 1,  'precision': None
+  5. 'ADDR2_LBL' (VARCHAR2):- field name for Address 2,  'precision': None
+  6. 'ADDR3_LBL' (VARCHAR2):- field name for Address 3,  'precision': None
+  7. 'ADDR4_LBL' (VARCHAR2):- field name for Address 4,  'precision': None
+  8. 'CITY_LBL' (VARCHAR2):- field name for City,  'precision': None
+  9. 'NUM1_LBL' (VARCHAR2):- field name for Number 1,  'precision': None
+  10. 'NUM2_LBL' (VARCHAR2):- field name for Number 2,  'precision': None
+  11. 'HOUSE_TYPE_LBL' (VARCHAR2):- field name for House Type,  'precision': None
+  12. 'COUNTY_LBL' (VARCHAR2):- field name for County,  'precision': None
+  13. 'STATE_LBL' (VARCHAR2):- field name for State,  'precision': None
+  14. 'POSTAL_LBL' (VARCHAR2):- field name for Postal or PIN code,  'precision': None
+  15. 'IN_CITY_LIM_LBL' (VARCHAR2):- field name for In City Limit,  'precision': None
+  16. 'GEO_CODE_LBL' (VARCHAR2):- field name for Geographic Code,  'precision': None
+  17. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, default: 99999
+
+IMP NOTE:- Keep in mind standard postal address format for the country asked to configure.  Every country won't use all the address fields. The fields that aren't used must be reflected in CI_COUNTRY table.
+-'CI_COUNTRY' contains usage flags of whether those fields are required for the particular country or not, whereas, 'CI_COUNTRY_L' contains labels for the fields.
+-CI_COUNTRY table should be populated with all 28 fields containing _USG_FLG and _AVAIL values for all address fields.
+-The field names ending with '_USG_FLG' have 3 usage values 'REQ'-Required, 'NA'-Not Allowed, 'OPT'-Optional.
+-The field names ending with '_AVAIL' have 2 values 'Y'-Yes and 'N'-No.
+-If a field's usage is 'REQ', its corresponding `_AVAIL` value should be 'Y'. If a field's usage is 'OPT', its corresponding `_AVAIL` value should be 'Y'. If a field's usage is 'NA', its corresponding `_AVAIL` value should be 'N'. 
+-CI_COUNTRY_L table should be populated with 17 fields containing address labels for the fields.
+-If a particular field's usage is NA, just insert its label as ('').
+-Using ellipses(...) is illegal. Generate all values and don't be lazy.
+-Output should have insert queries to all 4 tables.
+
+--------------------------------------------------------------------------
+
+Table 'CI_STATE_L' is used for storing State Language. Table 'CI_STATE_L' has 5 fields (columns) which are:  1. 'STATE' 2. 'COUNTRY' 3. 'LANGUAGE_CD' 4. 'DESCR' 5. 'VERSION'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'COUNTRY'  2. 'STATE'  3. 'LANGUAGE_CD' . 
+Table 'CI_STATE_L' has 2 foreign keys as listed:  'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE', and 'STATE' is foreign key from table 'CI_STATE'.
+'CI_STATE_L' is a child table of 'CI_COUNTRY' table.
+
+Field Descriptions for table 'CI_STATE_L':
+
+  1. 'STATE' (CHAR):- field name for State (2-letter Short code),  'precision': None
+  2. 'COUNTRY' (CHAR):- field name for Country (3-letter Short code),  'precision': None
+  3. 'LANGUAGE_CD' (CHAR):- field name for Language,  'precision': None
+  4. 'DESCR' (VARCHAR2):- field name for full name of the State,  'precision': None
+  5. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, default: 99999
+
+--------------------------------------------------------------------------
+
+Table 'CI_STATE' is used for storing State. Table 'CI_STATE' has 3 fields (columns) which are:  1. 'STATE' 2. 'COUNTRY' 3. 'VERSION'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'STATE'  2. 'COUNTRY' . 
+Table 'CI_STATE' has only one foreign key; 'COUNTRY' is a foreign key from table 'CI_COUNTRY'.
+'CI_STATE' is a child table of 'CI_COUNTRY' table.
+
+Field Descriptions for table 'CI_STATE':
+
+  1. 'STATE' (CHAR):- field name for State (2-letter Short code),  'precision': None
+  2. 'COUNTRY' (CHAR):- field name for Country (3-letter Short code),  'precision': None
+  3. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, default: 99999
+
+---------------------------------------------------------------------------
+
+Table 'CI_CAL_GL' is used for storing Accounting Calendar. Table 'CI_CAL_GL' has 3 fields (columns) which are:  1. 'CALENDAR_ID' 2. 'NUMBER_OF_PERIODS' 3. 'VERSION'. Out of these fields, only one is a primary key; 'CALENDAR_ID' is the primary key for 'CI_CAL_GL'
+'CI_CAL_GL' is a Primary Table.
+
+Field Descriptions for table 'CI_CAL_GL':
+
+  1. 'CALENDAR_ID' (CHAR):- field name for Calendar ID
+  2. 'NUMBER_OF_PERIODS' (NUMBER):- field name for Periods in a Year,  'precision': 2, 'nullable': False
+  3. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default':  99999
+
+The child tables of 'CI_CAL_GL' are ['CI_CAL_PERIOD_L', 'CI_CAL_PERIOD', 'CI_CAL_GL_L']. 
+(Generated when 'MAINT_OBJ_CD'=GL CALENDAR)
+
+--------------------------------------------------------------------------
+
+Table 'CI_CAL_PERIOD_L' is used for storing Accounting Calendar Period Language. Table 'CI_CAL_PERIOD_L' has 6 fields (columns) which are:  1. 'CALENDAR_ID' 2. 'LANGUAGE_CD' 3. 'FISCAL_YEAR' 4. 'PERIOD_DESCR' 5. 'ACCOUNTING_PERIOD' 6. 'VERSION'. Out of these fields, 4 are primary keys. The composite primary keys are:  1. 'LANGUAGE_CD'  2. 'ACCOUNTING_PERIOD'  3. 'FISCAL_YEAR'  4. 'CALENDAR_ID' . 
+Table 'CI_CAL_PERIOD_L' has 2 foreign keys as listed:  'ACCOUNTING_PERIOD' is foreign key from table 'CI_CAL_PERIOD', and 'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE'.
+'CI_CAL_PERIOD_L' is a child table of 'CI_CAL_GL' table.
+
+Field Descriptions for table 'CI_CAL_PERIOD_L':
+
+  1. 'CALENDAR_ID' (CHAR):- field name for Calendar ID
+  2. 'LANGUAGE_CD' (CHAR):- field name for Language
+  3. 'FISCAL_YEAR' (NUMBER):- field name for Fiscal Year,  'precision': 4, 'nullable': False
+  4. 'PERIOD_DESCR' (VARCHAR2):- field name for Period Description
+  5. 'ACCOUNTING_PERIOD' (NUMBER):- field name for Accounting Period,  'precision': 3, 'nullable': False
+  6. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default':  99999
+
+--------------------------------------------------------------------------
+
+Table 'CI_CAL_PERIOD' is used for storing Accounting Calendar Period. Table 'CI_CAL_PERIOD' has 8 fields (columns) which are:  1. 'CALENDAR_ID' 2. 'FISCAL_YEAR' 3. 'ACCOUNTING_PERIOD' 4. 'BEGIN_DT' 5. 'END_DT' 6. 'OPEN_FROM_DT' 7. 'OPEN_TO_DT' 8. 'VERSION'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'FISCAL_YEAR'  2. 'ACCOUNTING_PERIOD'  3. 'CALENDAR_ID' . 
+Table 'CI_CAL_PERIOD' has only one foreign key; 'CALENDAR_ID' is a foreign key from table 'CI_CAL_GL'.
+'CI_CAL_PERIOD' is a child table of 'CI_CAL_GL' table.
+
+Field Descriptions for table 'CI_CAL_PERIOD':
+
+  1. 'CALENDAR_ID' (CHAR):- field name for Calendar ID
+  2. 'FISCAL_YEAR' (NUMBER):- field name for Fiscal Year,  'precision': 4, 'nullable': False
+  3. 'ACCOUNTING_PERIOD' (NUMBER):- field name for Accounting Period,  'precision': 3, 'nullable': False
+  4. 'BEGIN_DT' (DATE):- field name for Begin Date, 'nullable': True
+  5. 'END_DT' (DATE):- field name for End Date, 'nullable': True
+  6. 'OPEN_FROM_DT' (DATE):- field name for Open From Date, 'nullable': True
+  7. 'OPEN_TO_DT' (DATE):- field name for Open To Date, 'nullable': True
+  8. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default':  99999
+
+--------------------------------------------------------------------------
+
+Table 'CI_CAL_GL_L' is used for storing Accounting Calendar Language. Table 'CI_CAL_GL_L' has 4 fields (columns) which are:  1. 'CALENDAR_ID' 2. 'DESCR' 3. 'LANGUAGE_CD' 4. 'VERSION'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'CALENDAR_ID'  2. 'LANGUAGE_CD' . 
+Table 'CI_CAL_GL_L' has 2 foreign keys as listed:  'CALENDAR_ID' is foreign key from table 'CI_CAL_GL', and 'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE'.
+'CI_CAL_GL_L' is a child table of 'CI_CAL_GL' table.
+
+Field Descriptions for table 'CI_CAL_GL_L':
+
+  1. 'CALENDAR_ID' (CHAR):- field name for Calendar ID
+  2. 'DESCR' (VARCHAR2):- field name for Description
+  3. 'LANGUAGE_CD' (CHAR):- field name for Language
+  4. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default':  99999
+
+--------------------------------------------------------------------------
+
+Table 'W1_CALENDAR' is used for storing Accounting Calendar. Table 'W1_CALENDAR' has 5 fields (columns) which are:  1. 'W1_CALENDAR_CD' 2. 'NUM_PERIODS' 3. 'BUS_OBJ_CD' 4. 'BO_DATA_AREA' 5. 'VERSION'. Out of these fields, only one is a primary key; 'W1_CALENDAR_CD' is the primary key for 'W1_CALENDAR'. 
+Table 'W1_CALENDAR' has only one foreign key; 'BUS_OBJ_CD' is a foreign key from table 'F1_BUS_OBJ'.
+'W1_CALENDAR' is a Primary Table.
+
+Field Descriptions for table 'W1_CALENDAR':
+
+  1. 'W1_CALENDAR_CD' (CHAR):- field name for Accounting Calendar
+  2. 'NUM_PERIODS' (NUMBER):- field name for Number of Periods,  'precision': 2, 'nullable': False
+  3. 'BUS_OBJ_CD' (CHAR):- field name for Business Object
+  4. 'BO_DATA_AREA' (CLOB):- field name for Business Object Data Area, 'nullable': True
+  5. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default':  99999
+
+The child tables of 'W1_CALENDAR' are ['W1_CALENDAR_PERIOD', 'W1_CALENDAR_PERIOD_L', 'W1_CALENDAR_L', 'W1_CALENDAR_CHAR']. 
+(Generated when 'MAINT_OBJ_CD'=W1-ACTCAL)
+
+--------------------------------------------------------------------------
+
+Table 'W1_CALENDAR_PERIOD' is used for storing Accounting Calendar Period. Table 'W1_CALENDAR_PERIOD' has 8 fields (columns) which are:  1. 'W1_CALENDAR_CD' 2. 'W1_FISCAL_YEAR' 3. 'ACCTG_PERIOD' 4. 'W1_START_DT' 5. 'W1_END_DT' 6. 'W1_OPEN_FROM_DT' 7. 'W1_OPEN_TO_DT' 8. 'VERSION'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'W1_FISCAL_YEAR'  2. 'ACCTG_PERIOD'  3. 'W1_CALENDAR_CD' . 
+Table 'W1_CALENDAR_PERIOD' has only one foreign key; 'W1_CALENDAR_CD' is a foreign key from table 'W1_CALENDAR'.
+'W1_CALENDAR_PERIOD' is a child table of 'W1_CALENDAR' table.
+
+Field Descriptions for table 'W1_CALENDAR_PERIOD':
+
+  1. 'W1_CALENDAR_CD' (CHAR):- field name for Accounting Calendar
+  2. 'W1_FISCAL_YEAR' (NUMBER):- field name for Fiscal Year,  'precision': 4, 'nullable': False
+  3. 'ACCTG_PERIOD' (NUMBER):- field name for Accounting Period,  'precision': 3, 'nullable': False
+  4. 'W1_START_DT' (DATE):- field name for Start Date
+  5. 'W1_END_DT' (DATE):- field name for End Date
+  6. 'W1_OPEN_FROM_DT' (DATE):- field name for Open From Date
+  7. 'W1_OPEN_TO_DT' (DATE):- field name for Open To Date
+  8. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default': 99999
+
+--------------------------------------------------------------------------
+
+Table 'W1_CALENDAR_PERIOD_L' is used for storing Accounting Calendar Period Language. Table 'W1_CALENDAR_PERIOD_L' has 6 fields (columns) which are:  1. 'W1_CALENDAR_CD' 2. 'W1_FISCAL_YEAR' 3. 'ACCTG_PERIOD' 4. 'LANGUAGE_CD' 5. 'DESCR100' 6. 'VERSION'. Out of these fields, 4 are primary keys. The composite primary keys are:  1. 'W1_FISCAL_YEAR'  2. 'ACCTG_PERIOD'  3. 'W1_CALENDAR_CD'  4. 'LANGUAGE_CD' . 
+Table 'W1_CALENDAR_PERIOD_L' has 2 foreign keys as listed:  'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE', and 'W1_CALENDAR_CD' is foreign key from table 'W1_CALENDAR_PERIOD'.
+'W1_CALENDAR_PERIOD_L' is a child table of 'W1_CALENDAR' table.
+
+Field Descriptions for table 'W1_CALENDAR_PERIOD_L':
+
+  1. 'W1_CALENDAR_CD' (CHAR):- field name for Accounting Calendar
+  2. 'W1_FISCAL_YEAR' (NUMBER):- field name for Fiscal Year,  'precision': 4, 'nullable': False
+  3. 'ACCTG_PERIOD' (NUMBER):- field name for Accounting Period,  'precision': 3, 'nullable': False
+  4. 'LANGUAGE_CD' (CHAR):- field name for Language
+  5. 'DESCR100' (VARCHAR2):- field name for Description
+  6. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default': 99999
+
+--------------------------------------------------------------------------
+
+Table 'W1_CALENDAR_L' is used for storing Accounting Calendar Language. Table 'W1_CALENDAR_L' has 4 fields (columns) which are:  1. 'W1_CALENDAR_CD' 2. 'LANGUAGE_CD' 3. 'DESCR100' 4. 'VERSION'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'W1_CALENDAR_CD'  2. 'LANGUAGE_CD' . 
+Table 'W1_CALENDAR_L' has 2 foreign keys as listed:  'W1_CALENDAR_CD' is foreign key from table 'W1_CALENDAR', and 'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE'.
+'W1_CALENDAR_L' is a child table of 'W1_CALENDAR' table.
+
+Field Descriptions for table 'W1_CALENDAR_L':
+
+  1. 'W1_CALENDAR_CD' (CHAR):- field name for Accounting Calendar
+  2. 'LANGUAGE_CD' (CHAR):- field name for Language
+  3. 'DESCR100' (VARCHAR2):- field name for Description
+  4. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default': 99999
+
+--------------------------------------------------------------------------
+
+Table 'W1_CALENDAR_CHAR' is used for storing Accounting Calendar Characteristics. Table 'W1_CALENDAR_CHAR' has 12 fields (columns) which are:  1. 'W1_CALENDAR_CD' 2. 'CHAR_TYPE_CD' 3. 'SEQ_NUM' 4. 'CHAR_VAL' 5. 'ADHOC_CHAR_VAL' 6. 'CHAR_VAL_FK1' 7. 'CHAR_VAL_FK2' 8. 'CHAR_VAL_FK3' 9. 'CHAR_VAL_FK4' 10. 'CHAR_VAL_FK5' 11. 'SEARCH_CHAR_VAL' 12. 'VERSION'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'CHAR_TYPE_CD'  2. 'SEQ_NUM'  3. 'W1_CALENDAR_CD' . 
+Table 'W1_CALENDAR_CHAR' has 2 foreign keys as listed:  'W1_CALENDAR_CD' is foreign key from table 'W1_CALENDAR', and 'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_TYPE'.
+'W1_CALENDAR_CHAR' is a child table of 'W1_CALENDAR' table.
+
+Field Descriptions for table 'W1_CALENDAR_CHAR':
+
+  1. 'W1_CALENDAR_CD' (CHAR):- field name for Accounting Calendar
+  2. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type
+  3. 'SEQ_NUM' (NUMBER):- field name for Sequence,  'precision': 3, 'nullable': False
+  4. 'CHAR_VAL' (CHAR):- field name for Characteristic Value
+  5. 'ADHOC_CHAR_VAL' (VARCHAR2):- field name for Adhoc Characteristic Value
+  6. 'CHAR_VAL_FK1' (VARCHAR2):- field name for Characteristic Value FK 1
+  7. 'CHAR_VAL_FK2' (VARCHAR2):- field name for Characteristic Value FK 2
+  8. 'CHAR_VAL_FK3' (VARCHAR2):- field name for Characteristic Value FK 3
+  9. 'CHAR_VAL_FK4' (VARCHAR2):- field name for Characteristic Value FK 4
+  10. 'CHAR_VAL_FK5' (VARCHAR2):- field name for Characteristic Value FK 5
+  11. 'SEARCH_CHAR_VAL' (VARCHAR2):- field name for Search Characteristic Value
+  12. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'default': 99999
+
+  Steps for configuring an Accounting Calendar:
+
+  1. Insert records into CI_CAL_GL.
+  2. Insert language details into CI_CAL_GL_L.
+  3. Insert periods into CI_CAL_PERIOD.
+  4. Insert period language details into CI_CAL_PERIOD_L.
+  5. Insert records into W1_CALENDAR.
+  6. Insert periods into W1_CALENDAR_PERIOD.
+  7. Insert period language details into W1_CALENDAR_PERIOD_L.
+  8. Insert calendar language details into W1_CALENDAR_L.
+  9. Insert calendar characteristics into W1_CALENDAR_CHAR.
+
+---------------------------------------------------------------------------
+Following are steps to configure Accounting Calendar:
+
+Step 1: Fill the below tables with insert queries that include all the field names provided.
+- `CI_CAL_GL`: This table serves as the primary storage for Accounting Calendars. It consists of 3 fields: `CALENDAR_ID`, `NUMBER_OF_PERIODS`, and `VERSION`. The `CALENDAR_ID` field, which is of type CHAR, acts as the primary key for this table. The `NUMBER_OF_PERIODS` field, of type NUMBER, represents the number of periods in a year with a precision of 2 and is not nullable. The `VERSION` field, also of type NUMBER, denotes the version with a precision of 5 and a default value of 99999. The `CI_CAL_GL` table is a primary table, with child tables including `CI_CAL_PERIOD_L`, `CI_CAL_PERIOD`, and `CI_CAL_GL_L`.
+- `CI_CAL_GL_L`: This table contains language-specific descriptions for Accounting Calendars. It features 4 fields: `CALENDAR_ID`, `DESCR`, `LANGUAGE_CD`, and `VERSION`. The primary key is a composite of `CALENDAR_ID` and `LANGUAGE_CD`. Foreign key references include `CALENDAR_ID` which links to the `CI_CAL_GL` table, and `LANGUAGE_CD` which references the `CI_LANGUAGE` table.
+- `CI_CAL_PERIOD`: This table holds information about Accounting Calendar Periods. It is made up of 8 fields: `CALENDAR_ID`, `FISCAL_YEAR`, `ACCOUNTING_PERIOD`, `BEGIN_DT`, `END_DT`, `OPEN_FROM_DT`, `OPEN_TO_DT`, and `VERSION`. The composite primary key consists of `FISCAL_YEAR`, `ACCOUNTING_PERIOD`, and `CALENDAR_ID`. The `CALENDAR_ID` field is a foreign key that links to the `CI_CAL_GL` table. 
+- `CI_CAL_PERIOD_L`: This table is used to store the language-specific details for Accounting Calendar Periods. It includes 6 fields: `CALENDAR_ID`, `LANGUAGE_CD`, `FISCAL_YEAR`, `PERIOD_DESCR`, `ACCOUNTING_PERIOD`, and `VERSION`. The primary key for this table is a composite of four fields: `LANGUAGE_CD`, `ACCOUNTING_PERIOD`, `FISCAL_YEAR`, and `CALENDAR_ID`. Foreign key constraints are present where `ACCOUNTING_PERIOD` references the `CI_CAL_PERIOD` table and `LANGUAGE_CD` references the `CI_LANGUAGE` table. 
+
+Step 2: Similarly fill the below set of tables without missing any field names.
+- `W1_CALENDAR`: This is another primary table used for storing Accounting Calendar data. It comprises 5 fields: `W1_CALENDAR_CD`, `NUM_PERIODS`, `BUS_OBJ_CD`, `BO_DATA_AREA`, and `VERSION`. The `W1_CALENDAR_CD` field, of type CHAR, is the primary key. The `NUM_PERIODS` field is of type NUMBER with a precision of 2 and is not nullable. The `BUS_OBJ_CD` field links to the `F1_BUS_OBJ` table, and `BO_DATA_AREA` is a CLOB field that is nullable. The `VERSION` field is of type NUMBER with a precision of 5 and a default value of 99999. The child tables of `W1_CALENDAR` include `W1_CALENDAR_PERIOD`, `W1_CALENDAR_PERIOD_L`, `W1_CALENDAR_L`, and `W1_CALENDAR_CHAR`.
+- `W1_CALENDAR_L`: This table is for storing language-specific descriptions of Accounting Calendars. It has 4 fields: `W1_CALENDAR_CD`, `LANGUAGE_CD`, `DESCR100`, and `VERSION`. The primary key is a composite of `W1_CALENDAR_CD` and `LANGUAGE_CD`. Foreign keys include `W1_CALENDAR_CD` which references the `W1_CALENDAR` table and `LANGUAGE_CD` which links to the `CI_LANGUAGE` table.
+- `W1_CALENDAR_PERIOD`: This table stores data on Accounting Calendar Periods. It has 8 fields: `W1_CALENDAR_CD`, `W1_FISCAL_YEAR`, `ACCTG_PERIOD`, `W1_START_DT`, `W1_END_DT`, `W1_OPEN_FROM_DT`, `W1_OPEN_TO_DT`, and `VERSION`. The primary key for this table is a composite of `W1_FISCAL_YEAR`, `ACCTG_PERIOD`, and `W1_CALENDAR_CD`. The `W1_CALENDAR_CD` field is a foreign key referencing the `W1_CALENDAR` table.
+- `W1_CALENDAR_PERIOD_L`: This table manages the language-specific descriptions for Accounting Calendar Periods. It contains 6 fields: `W1_CALENDAR_CD`, `W1_FISCAL_YEAR`, `ACCTG_PERIOD`, `LANGUAGE_CD`, `DESCR100`, and `VERSION`. The composite primary key consists of `W1_FISCAL_YEAR`, `ACCTG_PERIOD`, `W1_CALENDAR_CD`, and `LANGUAGE_CD`. The foreign keys include `LANGUAGE_CD`, which references the `CI_LANGUAGE` table, and `W1_CALENDAR_CD`, which links to the `W1_CALENDAR` table.
+- `W1_CALENDAR_CHAR`: This table stores characteristics of Accounting Calendars. It consists of 12 fields: `W1_CALENDAR_CD`, `CHAR_TYPE_CD`, `SEQ_NUM`, `CHAR_VAL`, `ADHOC_CHAR_VAL`, `CHAR_VAL_FK1`, `CHAR_VAL_FK2`, `CHAR_VAL_FK3`, `CHAR_VAL_FK4`, `CHAR_VAL_FK5`, `SEARCH_CHAR_VAL`, and `VERSION`. The primary key is a composite of `CHAR_TYPE_CD`, `SEQ_NUM`, and `W1_CALENDAR_CD`. Foreign keys include `W1_CALENDAR_CD`, which references the `W1_CALENDAR` table, and `CHAR_TYPE_CD`, which links to the `CI_CHAR_TYPE` table.
+
+Only output queries for the above exact 9 tables with the exact field names mentioned. 

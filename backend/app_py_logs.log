@@ -1,0 +1,463 @@
+2025-02-26 23:02:24,522 - INFO - This is a log message from app.py
+2025-02-27 13:00:19,219 - INFO - This is a log message from app.py
+2025-02-27 14:34:28,847 - INFO - This is a log message from app.py
+2025-02-27 14:39:41,132 - INFO - Response of query rag received in app.py: What a great question!
+
+Based on the provided context, I'll do my best to explain what Bill Cycles are.
+
+**Bill Cycles: A Definition**
+
+In Oracle Utilities Customer Care and Billing (C2M), a Bill Cycle is a schedule that defines when an account's service agreements should be billed. Think of it as a recurring billing process that controls when the system attempts to create bills for an account's service agreements.
+
+**Key Concepts**
+
+To understand Bill Cycles, let's break down some key concepts:
+
+1. **Window Billing**: This is a concept where the system produces bills for accounts over a few nights (or days) instead of trying to create all bills on one evening. This allows you to start billing accounts on the earliest possible day and then bill stragglers over successive evenings.
+2. **Bill Cycle Schedule**: Each Bill Cycle has its own schedule that defines the dates when a cycle's accounts are to be billed. The schedule controls when the system attempts to create bills for an account.
+3. **Open Bill Windows**: A Bill Cycle with an open bill window is one where the system looks for accounts in that cycle and attempts to create bills for them.
+
+**How it Works**
+
+Here's how Bill Cycles work:
+
+1. When a Bill Cycle creation process runs, it looks for Bill Cycles with open bill windows.
+2. For each such cycle, the system attempts to create bills for the accounts in that cycle.
+3. If a bill is created, it will be sent out that evening (or night).
+4. If a bill cannot be created (e.g., due to errors), the system will create an "error" bill with a message that can be analyzed by billing staff.
+5. The next day, billing staff can correct the problem or not. When the Bill Cycle creation process runs again, it deletes all "error" bills and attempts to recreate them.
+
+**Why are Bill Cycles Important?**
+
+Bill Cycles are crucial because they control when service agreements are billed for an account. An account's bill cycle should attempt to create bill segments at least as often as the shortest service agreement duration. For example, if an account has both monthly and quarterly service agreements, the account should be placed on a monthly Bill Cycle.
+
+In summary, Bill Cycles are schedules that define when an account's service agreements should be billed, allowing for window billing and controlling when bills are produced for accounts.
+2025-02-27 14:39:41,133 - INFO - Sources of query rag received in app.py: ['data/help/helpsets/C1_EN/C1_10Cycles_Bill_Cycles.html:None:0', 'data/help/helpsets/C1_EN/C1_10Cycles_The_Cyclical_Billing_Process_Wi.html:None:4', 'data/help/helpsets/C1_EN/C1_10Cycles_The_Cyclical_Billing_Process_Wi.html:None:2', 'data/help/helpsets/C1_EN/C1_BP05Billing_Bill_Frequency_Bill_Cycle_vs_Bi.html:None:3', 'data/help/helpsets/C1_EN/C1_10Cycles_The_Cyclical_Billing_Process_Wi.html:None:1']
+2025-02-27 14:39:41,133 - INFO - Emitting response to frontend.
+2025-02-27 15:02:30,345 - INFO - This is a log message from app.py
+2025-02-27 16:06:09,650 - INFO - This is a log message from app.py
+2025-02-27 16:07:04,806 - INFO - This is a log message from app.py
+2025-02-27 16:25:22,220 - INFO - This is a log message from app.py
+2025-02-27 16:27:37,835 - INFO - This is a log message from app.py
+2025-02-27 16:41:49,014 - INFO - This is a log message from app.py
+2025-02-27 16:46:23,705 - INFO - This is a log message from app.py
+2025-02-27 16:48:36,680 - INFO - Sources received in app.py: ['contextual']
+2025-02-27 16:48:36,680 - INFO - Emitting response to frontend.
+2025-02-27 16:52:46,240 - INFO - This is a log message from app.py
+2025-02-27 17:08:34,275 - INFO - This is a log message from app.py
+2025-02-27 17:17:52,064 - INFO - This is a log message from app.py
+2025-02-27 17:29:20,807 - INFO - This is a log message from app.py
+2025-02-27 17:38:24,664 - INFO - This is a log message from app.py
+2025-02-27 17:44:52,466 - INFO - This is a log message from app.py
+2025-02-28 11:10:58,141 - INFO - This is a log message from app.py
+2025-02-28 11:16:54,265 - INFO - Sources received in app.py: ['contextual']
+2025-02-28 11:16:54,272 - INFO - Emitting response to frontend.
+2025-02-28 11:30:26,023 - INFO - This is a log message from app.py
+2025-02-28 11:34:27,022 - INFO - Sources received in app.py: ['contextual']
+2025-02-28 11:34:27,022 - INFO - Emitting response to frontend.
+2025-02-28 11:44:29,967 - INFO - This is a log message from app.py
+2025-02-28 11:52:01,967 - INFO - This is a log message from app.py
+2025-02-28 11:58:45,701 - INFO - This is a log message from app.py
+2025-02-28 12:04:19,175 - INFO - This is a log message from app.py
+2025-02-28 12:16:11,978 - INFO - This is a log message from app.py
+2025-02-28 12:20:43,277 - INFO - Response received in app.py: To configure the work calendar for Mexico in 2003, I will generate values for all field names in the table using INSERT format. I will also update parent and child tables keeping primary and foreign keys in mind.
+
+**Table 'CI_CAL_WORK'**
+
+INSERT INTO CI_CAL_WORK (CALENDAR_CD, SUN, MON, TUE, WED, THU, FRI, VERSION, SAT)
+VALUES
+('MEX_2003', 'N', 'Y', 'Y', 'Y', 'Y', 'Y', 99999, 'N');
+
+**Table 'CI_CAL_WORK_L'**
+
+INSERT INTO CI_CAL_WORK_L (CALENDAR_CD, LANGUAGE_CD, DESCR, VERSION)
+VALUES
+('MEX_2003', 'ENG', 'Mexico Work Calendar for 2003', 99999);
+
+As the primary key of 'CI_CAL_WORK' is 'CALENDAR_CD', I will use this value to link the child table 'CI_CAL_WORK_L'. The foreign keys in 'CI_CAL_WORK_L' are 'CALENDAR_CD' and 'LANGUAGE_CD', which are linked to the parent tables 'CI_CAL_WORK' and 'CI_LANGUAGE' respectively.
+
+Note: Since there is only one row for each work calendar configuration, I have generated values for both tables.
+2025-02-28 12:20:43,277 - INFO - Sources received in app.py: ['contextual']
+2025-02-28 12:20:43,277 - INFO - Emitting response to frontend.
+2025-02-28 12:24:07,243 - INFO - This is a log message from app.py
+2025-02-28 12:37:01,086 - INFO - This is a log message from app.py
+2025-02-28 12:38:27,234 - INFO - This is a log message from app.py
+2025-02-28 12:48:44,515 - INFO - This is a log message from app.py
+2025-02-28 16:11:40,672 - INFO - This is a log message from app.py
+2025-02-28 16:15:21,102 - INFO - This is a log message from app.py
+2025-02-28 16:26:11,126 - INFO - This is a log message from app.py
+2025-02-28 16:36:18,875 - INFO - This is a log message from app.py
+2025-02-28 16:45:14,327 - INFO - Response received in app.py: To configure the work calendar for Mexico in 2003, I will provide the INSERT queries to fill the tables 'CI_CAL_WORK' and 'CI_CAL_WORK_L'.
+
+**Table 'CI_CAL_WORK'**
+
+INSERT INTO CI_CAL_WORK (CALENDAR_CD, SUN, MON, TUE, WED, THU, FRI, VERSION, SAT)
+VALUES
+('MEX_2003', 'N', 'Y', 'Y', 'Y', 'Y', 'Y', 99999, 'N');
+
+**Table 'CI_CAL_WORK_L'**
+
+INSERT INTO CI_CAL_WORK_L (CALENDAR_CD, LANGUAGE_CD, DESCR, VERSION)
+VALUES
+('MEX_2003', 'ENG', 'Mexico Work Calendar for 2003', 99999);
+
+Note: The values inserted into the tables are based on the assumption that Mexico has a standard work calendar in 2003 with Monday to Friday as working days and Saturday and Sunday as non-working days.Here are the SQL INSERT queries to configure work calendar for Mexico 2003:
+
+**Table 'CI_CAL_HOL'**
+
+```
+INSERT INTO CI_CAL_HOL (CALENDAR_CD, HOLIDAY_DT, VERSION, F1_HOLIDAY_START_DTTM, F1_HOLIDAY_END_DTTM)
+VALUES
+('MX', '2003-01-01', 99999, '2003-01-01', '2003-01-01'),
+('MX', '2003-02-05', 99999, '2003-02-05', '2003-02-05'),
+('MX', '2003-03-21', 99999, '2003-03-21', '2003-03-21'),
+('MX', '2003-05-01', 99999, '2003-05-01', '2003-05-01'),
+('MX', '2003-09-16', 99999, '2003-09-16', '2003-09-16'),
+('MX', '2003-11-20', 99999, '2003-11-20', '2003-11-20'),
+('MX', '2003-12-25', 99999, '2003-12-25', '2003-12-25');
+```
+
+**Table 'CI_CAL_HOL_L'**
+
+```
+INSERT INTO CI_CAL_HOL_L (CALENDAR_CD, HOLIDAY_DT, LANGUAGE_CD, HOLIDAY_NAME, VERSION)
+VALUES
+('MX', '2003-01-01', 'ENG', 'New Year''s Day', 99999),
+('MX', '2003-02-05', 'ENG', 'Constitution Day', 99999),
+('MX', '2003-03-21', 'ENG', 'Benito Juárez''s Birthday Memorial', 99999),
+('MX', '2003-05-01', 'ENG', 'Labor Day / May Day', 99999),
+('MX', '2003-09-16', 'ENG', 'Independence Day', 99999),
+('MX', '2003-11-20', 'ENG', 'Revolution Day Memorial', 99999),
+('MX', '2003-12-25', 'ENG', 'Christmas Day', 99999);
+```
+
+Note that the `CALENDAR_CD` is set to `'MX'`, which represents Mexico, and the `HOLIDAY_DT` is set to the corresponding date for each holiday. The `LANGUAGE_CD` is set to `'ENG'`, which represents English language.
+2025-02-28 16:45:14,327 - INFO - Sources received in app.py: ['contextual']
+2025-02-28 16:45:14,327 - INFO - Emitting response to frontend.
+2025-02-28 17:02:11,516 - INFO - Response received in app.py: To configure the work calendar for India in 2024, I will provide the INSERT queries to fill the tables 'CI_CAL_WORK' and 'CI_CAL_WORK_L'.
+
+**Table 'CI_CAL_WORK'**
+
+INSERT INTO CI_CAL_WORK (CALENDAR_CD, SUN, MON, TUE, WED, THU, FRI, VERSION, SAT)
+VALUES
+('IND_2024', 'N', 'Y', 'Y', 'Y', 'Y', 'Y', 99999, 'N');
+
+**Table 'CI_CAL_WORK_L'**
+
+INSERT INTO CI_CAL_WORK_L (CALENDAR_CD, LANGUAGE_CD, DESCR, VERSION)
+VALUES
+('IND_2024', 'ENG', 'Work Calendar for India in 2024', 99999);
+
+Note: The work calendar configuration for India is typically a standard Monday-to-Friday working week with weekends being Saturday and Sunday.To configure the work calendar for India 2024, I will provide the SQL INSERT queries for both tables 'CI_CAL_HOL' and 'CI_CAL_HOL_L'.
+
+**Table 'CI_CAL_HOL'**
+
+```sql
+INSERT INTO CI_CAL_HOL (CALENDAR_CD, HOLIDAY_DT, F1_HOLIDAY_START_DTTM, F1_HOLIDAY_END_DTTM, VERSION)
+VALUES 
+('IND', '2024-01-13', '2024-01-13', '2024-01-13', 99999),
+('IND', '2024-01-26', '2024-01-26', '2024-01-26', 99999),
+('IND', '2024-03-25', '2024-03-25', '2024-03-25', 99999),
+('IND', '2024-03-29', '2024-03-29', '2024-03-29', 99999),
+('IND', '2024-04-11', '2024-04-11', '2024-04-11', 99999),
+('IND', '2024-04-14', '2024-04-14', '2024-04-14', 99999),
+('IND', '2024-04-17', '2024-04-17', '2024-04-17', 99999),
+('IND', '2024-04-21', '2024-04-21', '2024-04-21', 99999),
+('IND', '2024-05-23', '2024-05-23', '2024-05-23', 99999),
+('IND', '2024-06-17', '2024-06-17', '2024-06-17', 99999),
+('IND', '2024-07-17', '2024-07-17', '2024-07-17', 99999),
+('IND', '2024-08-15', '2024-08-15', '2024-08-15', 99999),
+('IND', '2024-08-26', '2024-08-26', '2024-08-26', 99999),
+('IND', '2024-09-16', '2024-09-16', '2024-09-16', 99999),
+('IND', '2024-10-02', '2024-10-02', '2024-10-02', 99999),
+('IND', '2024-10-12', '2024-10-12', '2024-10-12', 99999),
+('IND', '2024-10-31', '2024-10-31', '2024-10-31', 99999),
+('IND', '2024-11-15', '2024-11-15', '2024-11-15', 99999),
+('IND', '2024-12-25', '2024-12-25', '2024-12-25', 99999);
+```
+
+**Table 'CI_CAL_HOL_L'**
+
+```sql
+INSERT INTO CI_CAL_HOL_L (CALENDAR_CD, HOLIDAY_DT, LANGUAGE_CD, HOLIDAY_NAME, VERSION)
+VALUES 
+('IND', '2024-01-13', 'ENG', 'Lohri', 99999),
+('IND', '2024-01-26', 'ENG', 'Republic Day', 99999),
+('IND', '2024-03-25', 'ENG', 'Holi', 99999),
+('IND', '2024-03-25', 'ENG', 'Dolyatra', 99999),
+('IND', '2024-03-29', 'ENG', 'Good Friday', 99999),
+('IND', '2024-04-11', 'ENG', 'Ramzan Id/Eid-ul-Fitar', 99999),
+('IND', '2024-04-14', 'ENG', 'Ambedkar Jayanti', 99999),
+('IND', '2024-04-17', 'ENG', 'Rama Navami', 99999),
+('IND', '2024-04-21', 'ENG', 'Mahavir Jayanti', 99999),
+('IND', '2024-05-23', 'ENG', 'Buddha Purnima/Vesak', 99999),
+('IND', '2024-06-17', 'ENG', 'Bakrid/Eid ul-Adha', 99999),
+('IND', '2024-07-17', 'ENG', 'Muharram/Ashura', 99999),
+('IND', '2024-08-15', 'ENG', 'Independence Day', 99999),
+('IND', '2024-08-26', 'ENG', 'Ganesh Chaturthi', 99999),
+('IND', '2024-09-16', 'ENG', 'Janmashtami', 99999),
+('IND', '2024-10-02', 'ENG', 'Mahatma Gandhi Jayanti', 99999),
+('IND', '2024-10-12', 'ENG', 'Dussehra', 99999),
+('IND', '2024-10-31', 'ENG', 'Diwali', 99999),
+('IND', '2024-11-15', 'ENG', 'Chhat Puja', 99999),
+('IND', '2024-12-25', 'ENG', 'Christmas', 99999);
+```
+
+Note that I've used the English language code ('ENG') for all holidays, as per your request.
+2025-02-28 17:02:11,516 - INFO - Sources received in app.py: ['contextual']
+2025-02-28 17:02:11,516 - INFO - Emitting response to frontend.
+2025-03-04 11:35:01,217 - INFO - This is a log message from app.py
+2025-03-04 11:50:38,546 - INFO - Response received in app.py: To configure the work calendar for China in 2024, I will provide the INSERT queries to fill the tables 'CI_CAL_WORK' and 'CI_CAL_WORK_L'.
+
+**Table 'CI_CAL_WORK'**
+
+INSERT INTO CI_CAL_WORK (CALENDAR_CD, SUN, MON, TUE, WED, THU, FRI, VERSION, SAT)
+VALUES
+('CHN_2024', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 99999, 'Y');
+
+**Table 'CI_CAL_WORK_L'**
+
+INSERT INTO CI_CAL_WORK_L (CALENDAR_CD, LANGUAGE_CD, DESCR, VERSION)
+VALUES
+('CHN_2024', 'ENG', 'China Work Calendar 2024', 99999);
+
+Note: The primary key for both tables is the 'CALENDAR_CD' field. In this case, I have used 'CHN_2024' as the calendar code.
+
+The above INSERT queries will configure the work calendar for China in 2024 with all days of the week (Sunday to Saturday) marked as working days. The description in the child table 'CI_CAL_WORK_L' is set to 'China Work Calendar 2024'.To configure the work calendar for China 2024, I will provide the necessary INSERT queries for both tables 'CI_CAL_HOL' and 'CI_CAL_HOL_L'.
+
+**Table 'CI_CAL_HOL'**
+
+The table 'CI_CAL_HOL' requires two primary keys: 'CALENDAR_CD' and 'HOLIDAY_DT'. Since we are configuring the work calendar for China, I will use the calendar code 'CHN' for all rows. The 'HOLIDAY_DT' column will contain the holiday dates.
+
+Here is the INSERT query to populate table 'CI_CAL_HOL':
+
+```sql
+INSERT INTO CI_CAL_HOL (CALENDAR_CD, HOLIDAY_DT, VERSION, F1_HOLIDAY_START_DTTM, F1_HOLIDAY_END_DTTM)
+VALUES 
+('CHN', '2024-01-01', 99999, '2024-01-01', '2024-01-01'),
+('CHN', '2024-02-10', 99999, '2024-02-10', '2024-02-16'),
+('CHN', '2024-02-11', 99999, '2024-02-11', '2024-02-17'),
+('CHN', '2024-02-12', 99999, '2024-02-12', '2024-02-17'),
+('CHN', '2024-02-13', 99999, '2024-02-13', '2024-02-17'),
+('CHN', '2024-02-14', 99999, '2024-02-14', '2024-02-17'),
+('CHN', '2024-02-15', 99999, '2024-02-15', '2024-02-17'),
+('CHN', '2024-02-16', 99999, '2024-02-16', '2024-02-17'),
+('CHN', '2024-03-08', 99999, '2024-03-08', '2024-03-08'),
+('CHN', '2024-04-04', 99999, '2024-04-04', '2024-04-06'),
+('CHN', '2024-04-05', 99999, '2024-04-05', '2024-04-06'),
+('CHN', '2024-04-06', 99999, '2024-04-06', '2024-04-06'),
+('CHN', '2024-05-01', 99999, '2024-05-01', '2024-05-05'),
+('CHN', '2024-05-02', 99999, '2024-05-02', '2024-05-05'),
+('CHN', '2024-05-03', 99999, '2024-05-03', '2024-05-05'),
+('CHN', '2024-05-04', 99999, '2024-05-04', '2024-05-05'),
+('CHN', '2024-05-05', 99999, '2024-05-05', '2024-05-05'),
+('CHN', '2024-06-10', 99999, '2024-06-10', '2024-06-10'),
+('CHN', '2024-09-15', 99999, '2024-09-15', '2024-09-17'),
+('CHN', '2024-09-16', 99999, '2024-09-16', '2024-09-17'),
+('CHN', '2024-09-17', 99999, '2024-09-17', '2024-09-17'),
+('CHN', '2024-10-01', 99999, '2024-10-01', '2024-10-07'),
+('CHN', '2024-10-02', 99999, '2024-10-02', '2024-10-07'),
+('CHN', '2024-10-03', 99999, '2024-10-03', '2024-10-07'),
+('CHN', '2024-10-04', 99999, '2024-10-04', '2024-10-07'),
+('CHN', '2024-10-05', 99999, '2024-10-05', '2024-10-07'),
+('CHN', '2024-10-06', 99999, '2024-10-06', '2024-10-07'),
+('CHN', '2024-10-07', 99999, '2024-10-07', '2024-10-07');
+```
+
+**Table 'CI_CAL_HOL_L'**
+
+The table 'CI_CAL_HOL_L' requires a foreign key reference to the primary key in table 'CI_CAL_HOL'. Since we are configuring the work calendar for China, I will use the same calendar code 'CHN' for all rows. The 'NAME' column will contain the holiday names.
+
+Here is the INSERT query to populate table 'CI_CAL_HOL_L':
+
+```sql
+INSERT INTO CI_CAL_HOL_L (CALENDAR_CD, HOLIDAY_DT, NAME)
+VALUES 
+('CHN', '2024-01-01', 'New Year''s Day'),
+('CHN', '2024-02-10', 'Chinese New Year'),
+('CHN', '2024-02-11', 'Spring Festival Golden Week holiday'),
+('CHN', '2024-02-12', 'Spring Festival Golden Week holiday'),
+('CHN', '2024-02-13', 'Spring Festival Golden Week holiday'),
+('CHN', '2024-02-14', 'Spring Festival Golden Week holiday'),
+('CHN', '2024-02-15', 'Spring Festival Golden Week holiday'),
+('CHN', '2024-02-16', 'Spring Festival Golden Week holiday'),
+('CHN', '2024-03-08', "International Women's Day"),
+('CHN', '2024-04-04', 'Qingming Festival'),
+('CHN', '2024-04-05', 'Qingming Festival'),
+('CHN', '2024-04-06', 'Qingming Festival'),
+('CHN', '2024-05-01', 'Labor Day'),
+('CHN', '2024-05-02', 'Labor Day'),
+('CHN', '2024-05-03', 'Labor Day'),
+('CHN', '2024-05-04', 'Labor Day'),
+('CHN', '2024-05-05', 'Labor Day'),
+('CHN', '2024-06-10', 'Dragon Boat Festival'),
+('CHN', '2024-09-15', 'Mid-Autumn Festival'),
+('CHN', '2024-09-16', 'Mid-Autumn Festival'),
+('CHN', '2024-09-17', 'Mid-Autumn Festival'),
+('CHN', '2024-10-01', 'National Day'),
+('CHN', '2024-10-02', 'National Day'),
+('CHN', '2024-10-03', 'National Day'),
+('CHN', '2024-10-04', 'National Day'),
+('CHN', '2024-10-05', 'National Day'),
+('CHN', '2024-10-06', 'National Day'),
+('CHN', '2024-10-07', 'National Day');
+```
+
+Please note that the above INSERT queries are based on the assumption that you have a table named `CI_CAL_HOL` and another table named `CI_CAL_HOL_L`. The actual column names may vary depending on your database schema.
+2025-03-04 11:50:38,546 - INFO - Sources received in app.py: ['contextual']
+2025-03-04 11:50:38,547 - INFO - Emitting response to frontend.
+2025-03-04 14:24:59,659 - INFO - This is a log message from app.py
+2025-03-04 14:34:50,518 - INFO - Response received in app.py: Here are the INSERT queries to configure the database tables:
+
+**CI_TD_TYPE**
+
+```
+INSERT INTO CI_TD_TYPE (TD_TYPE_CD, CRE_BATCH_CD, MESSAGE_CAT_NBR, MESSAGE_NBR, RTE_BATCH_CD, VERSION, OWNER_FLG, TD_USAGE_TYPE_FLG, TD_PRIORITY_FLG, NAV_OPT_CD)
+VALUES
+('TDT001', 'CB001', 1, 101, 'RB001', 99999, 'Y', 'Y', 'N', 'N'),
+('TDT002', 'CB002', 2, 102, 'RB002', 99999, 'Y', 'Y', 'N', 'N'),
+('TDT003', 'CB003', 3, 103, 'RB003', 99999, 'Y', 'Y', 'N', 'N');
+```
+
+**CI_TD_TYPE_L**
+
+```
+INSERT INTO CI_TD_TYPE_L (TD_TYPE_CD, LANGUAGE_CD, VERSION, DESCR, DESRLONG, OWNER_FLG)
+VALUES
+('TDT001', 'ENG', 99999, 'English To Do Type 1', 'This is a description for English To Do Type 1.', 'Y'),
+('TDT002', 'ENG', 99999, 'English To Do Type 2', 'This is a description for English To Do Type 2.', 'Y'),
+('TDT003', 'ENG', 99999, 'English To Do Type 3', 'This is a description for English To Do Type 3.', 'Y');
+```
+
+**CI_TD_TYPE_ALG**
+
+```
+INSERT INTO CI_TD_TYPE_ALG (TD_TYPE_CD, TD_TYPE_SEVT_FLG, SEQ_NUM, ALG_CD, VERSION)
+VALUES
+('TDT001', 'A', 1, 'ALG001', 99999),
+('TDT001', 'B', 2, 'ALG002', 99999),
+('TDT002', 'C', 1, 'ALG003', 99999),
+('TDT003', 'D', 1, 'ALG004', 99999);
+```
+
+**CI_TD_TYPE_CHAR**
+
+```
+INSERT INTO CI_TD_TYPE_CHAR (TD_TYPE_CD, CHAR_TYPE_CD, SEQ_NUM, CHAR_VAL, ADHOC_CHAR_VAL, CHAR_VAL_FK1, CHAR_VAL_FK2, CHAR_VAL_FK3, CHAR_VAL_FK4, CHAR_VAL_FK5, SRCH_CHAR_VAL, VERSION)
+VALUES
+('TDT001', 'CT001', 1, 'Value 1', '', '', '', '', '', '', 'Search Value 1', 99999),
+('TDT001', 'CT002', 2, 'Value 2', '', '', '', '', '', '', 'Search Value 2', 99999),
+('TDT002', 'CT003', 1, 'Value 3', '', '', '', '', '', '', 'Search Value 3', 99999);
+```
+
+**CI_CHTY_TDTY**
+
+```
+INSERT INTO CI_CHTY_TDTY (TD_TYPE_CD, CHAR_TYPE_CD, CHAR_VAL, REQUIRED_SW, DEFAULT_SW, SORT_SEQ, VERSION, ADHOC_CHAR_VAL, CHAR_VAL_FK1, CHAR_VAL_FK2, CHAR_VAL_FK3, CHAR_VAL_FK4, CHAR_VAL_FK5)
+VALUES
+('TDT001', 'CT001', 'Value 1', 'Y', '', 1, 99999, '', '', '', '', '', ''),
+('TDT002', 'CT002', 'Value 2', 'N', '', 2, 99999, '', '', '', '', '', ''),
+('TDT003', 'CT003', 'Value 3', 'Y', '', 3, 99999, '', '', '', '', '', '');
+```
+
+Note: The values generated are fictional and for demonstration purposes only.To generate the values for the tables, I will follow the instructions and provide the necessary INSERT queries.
+
+**CI_TD_DRLKEY_TY**
+
+Since we need to insert Drill Key values, let's start by generating some data. Here are 10 rows of data:
+
+```sql
+INSERT INTO CI_TD_DRLKEY_TY (TD_TYPE_CD, SEQ_NUM, FLD_NAME, TBL_NAME, VERSION, OWNER_FLG)
+VALUES 
+('TYP1', 1, 'DRILL_KEY_1', 'TABLE1', 99999, 0),
+('TYP2', 1, 'DRILL_KEY_2', 'TABLE2', 99999, 0),
+('TYP3', 1, 'DRILL_KEY_3', 'TABLE3', 99999, 0),
+('TYP4', 1, 'DRILL_KEY_4', 'TABLE4', 99999, 0),
+('TYP5', 1, 'DRILL_KEY_5', 'TABLE5', 99999, 0),
+('TYP6', 2, 'DRILL_KEY_6', 'TABLE6', 99999, 0),
+('TYP7', 3, 'DRILL_KEY_7', 'TABLE7', 99999, 0),
+('TYP8', 4, 'DRILL_KEY_8', 'TABLE8', 99999, 0),
+('TYP9', 5, 'DRILL_KEY_9', 'TABLE9', 99999, 0),
+('TYP10', 6, 'DRILL_KEY_10', 'TABLE10', 99999, 0);
+```
+
+**CI_TD_SRTKEY_TY**
+
+Next, let's generate some data for the Sort Key table:
+
+```sql
+INSERT INTO CI_TD_SRTKEY_TY (TD_TYPE_CD, SEQ_NUM, VERSION, DEFAULT_SW, ORDER_FLG, OWNER_FLG)
+VALUES 
+('TYP1', 1, 99999, 0, 0, 0),
+('TYP2', 2, 99999, 0, 0, 0),
+('TYP3', 3, 99999, 0, 0, 0),
+('TYP4', 4, 99999, 0, 0, 0),
+('TYP5', 5, 99999, 0, 0, 0);
+```
+
+**CI_TD_SRTKEY_TY_L**
+
+Now, let's generate some data for the Sort Key Language table:
+
+```sql
+INSERT INTO CI_TD_SRTKEY_TY_L (TD_TYPE_CD, SEQ_NUM, LANGUAGE_CD, VERSION, DESCR, OWNER_FLG)
+VALUES 
+('TYP1', 1, 'ENG', 99999, 'English', 0),
+('TYP2', 2, 'FRA', 99999, 'French', 0),
+('TYP3', 3, 'ESP', 99999, 'Spanish', 0);
+```
+
+**CI_TD_VAL_ROLE**
+
+Next, let's generate some data for the To Do Type Role table:
+
+```sql
+INSERT INTO CI_TD_VAL_ROLE (TD_TYPE_CD, ROLE_ID, VERSION, DEFAULT_SW)
+VALUES 
+('TYP1', 1, 99999, 0),
+('TYP2', 2, 99999, 0),
+('TYP3', 3, 99999, 0);
+```
+
+**CI_TD_EX_LIST**
+
+Finally, let's generate some data for the Message Overrides table:
+
+```sql
+INSERT INTO CI_TD_EX_LIST (TD_TYPE_CD, MESSAGE_CAT_NBR, MESSAGE_NBR, OVERRIDE_ROLE, EXCLUDE_SW, VERSION, SCR_CD)
+VALUES 
+('TYP1', 1, 1, 1, 0, 99999, 'SCR1'),
+('TYP2', 2, 2, 2, 0, 99999, 'SCR2'),
+('TYP3', 3, 3, 3, 0, 99999, 'SCR3');
+```
+
+These INSERT queries will populate the tables with the necessary data.
+2025-03-04 14:34:50,519 - INFO - Sources received in app.py: ['contextual']
+2025-03-04 14:34:50,519 - INFO - Emitting response to frontend.
+2025-03-05 11:20:20,674 - INFO - This is a log message from app.py
+2025-03-05 12:43:51,984 - INFO - This is a log message from app.py
+2025-03-05 12:59:56,399 - INFO - Sources received in app.py: ['contextual']
+2025-03-05 12:59:56,409 - INFO - Emitting response to frontend.
+2025-03-05 18:47:46,835 - INFO - Server started now
+2025-03-10 11:13:00,147 - INFO - Server started now
+2025-03-10 11:20:27,615 - INFO - Server started now
+2025-03-10 11:35:41,227 - INFO - Server started now
+2025-03-10 20:48:02,151 - INFO - Server started now
+2025-03-10 20:48:59,201 - INFO - Server started now
+2025-03-10 21:46:41,576 - INFO - Server started now
+2025-03-10 21:48:15,566 - INFO - Server started now
+2025-03-10 21:51:29,724 - INFO - Server started now
+2025-03-10 21:55:29,819 - INFO - Response of query rag received in app.py: A great question about C2M (Customer Care and Billing)!
+
+Based on the provided context, a Bill Cycle is a scheduling mechanism that controls when the system attempts to create bills for an account's service agreements. In other words, it defines the dates when a cycle's accounts are to be billed.
+
+A Bill Cycle has two key components:
+
+1. **Bill Window**: This refers to the period of time during which the system attempts to produce bills for accounts in that cycle. The window is typically open for a few nights, allowing meter reads to enter the system and enabling the creation of bills.
+2. **Schedule**: The schedule defines the specific dates when a cycle's accounts are to be billed. This can include the first night (the day the window opens) and the last night (the day the window closes), which marks the earliest possible day and the last possible day for meter reads to enter the system, respectively.
+
+The purpose of Bill Cycles is to provide better cash flow by allowing accounts to be billed on the earliest possible day, followed by subsequent billing attempts over successive evenings. This process helps ensure that bills are created and sent out in a timely manner, which can improve financial management and reduce delays.
+
+In summary, a Bill Cycle is a scheduling mechanism that controls when bills are produced for an account's service agreements, allowing for efficient and timely billing processes.
+2025-03-10 21:55:29,820 - INFO - Sources of query rag received in app.py: ['data/help/helpsets/C1_EN/C1_10Cycles_Bill_Cycles.html:None:0', 'data/help/helpsets/C1_EN/C1_10Cycles_The_Cyclical_Billing_Process_Wi.html:None:4', 'data/help/helpsets/C1_EN/C1_10Cycles_The_Cyclical_Billing_Process_Wi.html:None:2', 'data/help/helpsets/C1_EN/C1_BP05Billing_Bill_Frequency_Bill_Cycle_vs_Bi.html:None:3', 'data/help/helpsets/C1_EN/C1_10Cycles_The_Cyclical_Billing_Process_Wi.html:None:1']
+2025-03-10 21:55:29,820 - INFO - Emitting response to frontend.

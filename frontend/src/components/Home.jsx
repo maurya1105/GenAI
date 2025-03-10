@@ -19,7 +19,7 @@ import { FlipWords } from "./ui/flipwords";
 let statelessMessages = []; //stores the messages of active chat
 let chatStore = []; //stores the messages of all the chats
 let chatTypeStore = [0]; //stores the type of chat
-let types = ["About C2M", "About Database", "Configuration Help"]; //types of chat
+let types = ["CAbout 2M", "About Database", "Configuration Help"]; //types of chat
 
 
 function Home() {
@@ -53,17 +53,26 @@ function Home() {
   }, [activeChatIndex]);
 
 
-  const sendMessage = async (chatbox) => { //to send the query to the server
-    socket.connect(); //connect to the server
-    setSwitched(false); //set switched to false
-    setSendButtonKey((sendButtonKey + 1) % 100); //update the key of the send button so that it animates
-    setReceived(false); //set received to false
-    socket.emit("query", { //emit the query to the server
+  const sendMessage = async (chatbox) => { 
+    socket.connect(); 
+    setSwitched(false); 
+    setSendButtonKey((sendButtonKey + 1) % 100); 
+    setReceived(false); 
+
+    const dataToSend = { 
       history: JSON.parse(JSON.stringify(messages)).reverse(),
       query: chatbox.value,
       chatIndex: activeChatIndex,
       chatType: chatType,
-    });
+    };
+
+    console.log("Sending event 'query' with data:", dataToSend); 
+
+    socket.emit("query", dataToSend);
+
+
+    //console.log("Sent message: ",chatbox.value)
+    
     statelessMessages = JSON.parse( //update the messages of the active chat
       JSON.stringify([
         {
@@ -78,7 +87,7 @@ function Home() {
     chatbox.value = ""; //clear the chat box
     chatbox.style.height = "28px"; //set the height of the chat box
     setcSHeight("0px");
-    await new Promise((r) => setTimeout(r, 300));
+    await new Promise((r) => setTimeout(r, 300000));
     setcSHeight("28px");
   };
 
@@ -110,6 +119,7 @@ function Home() {
         }}
         onClick={() => {
           setChatType(index);
+          console.log("Index number is :", index)
           chatTypeStore[activeChatIndex] = index;
         }}
       >

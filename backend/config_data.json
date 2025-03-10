@@ -1,0 +1,876 @@
+{
+    "C2M": {
+        "version_1": {
+            "work_cal": {
+                "IN_2022": {
+                    "holidays": [
+                        {
+                            "name": "Lohri",
+                            "date": "2022-01-13"
+                        },
+                        {
+                            "name": "Republic Day",
+                            "date": "2022-01-26"
+                        },
+                        {
+                            "name": "Maha Shivaratri/Shivaratri",
+                            "date": "2022-03-01"
+                        },
+                        {
+                            "name": "Holi",
+                            "date": "2022-03-18"
+                        },
+                        {
+                            "name": "Dolyatra",
+                            "date": "2022-03-18"
+                        },
+                        {
+                            "name": "Mahavir Jayanti",
+                            "date": "2022-04-14"
+                        },
+                        {
+                            "name": "Good Friday",
+                            "date": "2022-04-15"
+                        },
+                        {
+                            "name": "Ramzan Id/Eid-ul-Fitar",
+                            "date": "2022-05-03"
+                        },
+                        {
+                            "name": "Buddha Purnima/Vesak",
+                            "date": "2022-05-16"
+                        },
+                        {
+                            "name": "Bakrid/Eid ul-Adha",
+                            "date": "2022-07-10"
+                        },
+                        {
+                            "name": "Muharram/Ashura",
+                            "date": "2022-08-09"
+                        },
+                        {
+                            "name": "Independence Day",
+                            "date": "2022-08-15"
+                        },
+                        {
+                            "name": "Janmashtami",
+                            "date": "2022-08-19"
+                        },
+                        {
+                            "name": "Mahatma Gandhi Jayanti",
+                            "date": "2022-10-02"
+                        },
+                        {
+                            "name": "Dussehra",
+                            "date": "2022-10-05"
+                        },
+                        {
+                            "name": "Milad un-Nabi/Id-e-Milad",
+                            "date": "2022-10-09"
+                        },
+                        {
+                            "name": "Diwali/Deepavali",
+                            "date": "2022-10-24"
+                        },
+                        {
+                            "name": "Guru Nanak Jayanti",
+                            "date": "2022-11-08"
+                        },
+                        {
+                            "name": "Christmas",
+                            "date": "2022-12-25"
+                        }
+                    ]
+                },
+                "IN_2024": {
+                    "holidays": [
+                        {
+                            "name": "Lohri",
+                            "date": "2024-01-13"
+                        },
+                        {
+                            "name": "Republic Day",
+                            "date": "2024-01-26"
+                        },
+                        {
+                            "name": "Holi",
+                            "date": "2024-03-25"
+                        },
+                        {
+                            "name": "Dolyatra",
+                            "date": "2024-03-25"
+                        },
+                        {
+                            "name": "Good Friday",
+                            "date": "2024-03-29"
+                        },
+                        {
+                            "name": "Ramzan Id/Eid-ul-Fitar",
+                            "date": "2024-04-11"
+                        },
+                        {
+                            "name": "Ambedkar Jayanti",
+                            "date": "2024-04-14"
+                        },
+                        {
+                            "name": "Rama Navami",
+                            "date": "2024-04-17"
+                        },
+                        {
+                            "name": "Mahavir Jayanti",
+                            "date": "2024-04-21"
+                        },
+                        {
+                            "name": "Buddha Purnima/Vesak",
+                            "date": "2024-05-23"
+                        },
+                        {
+                            "name": "Bakrid/Eid ul-Adha",
+                            "date": "2024-06-17"
+                        },
+                        {
+                            "name": "Muharram/Ashura",
+                            "date": "2024-07-17"
+                        },
+                        {
+                            "name": "Independence Day",
+                            "date": "2024-08-15"
+                        },
+                        {
+                            "name": "Janmashtami",
+                            "date": "2024-08-26"
+                        },
+                        {
+                            "name": "Milad un-Nabi/Id-e-Milad",
+                            "date": "2024-09-16"
+                        },
+                        {
+                            "name": "Mahatma Gandhi Jayanti",
+                            "date": "2024-10-02"
+                        },
+                        {
+                            "name": "Dussehra",
+                            "date": "2024-10-12"
+                        },
+                        {
+                            "name": "Diwali/Deepavali",
+                            "date": "2024-10-31"
+                        },
+                        {
+                            "name": "Guru Nanak Jayanti",
+                            "date": "2024-11-15"
+                        },
+                        {
+                            "name": "Christmas",
+                            "date": "2024-12-25"
+                        }
+                    ]
+                },
+                "TH_2024": {
+                    "holidays": [
+                        {
+                            "name": "New Year's Day",
+                            "date": "2024-01-01"
+                        },
+                        {
+                            "name": "Makha Bucha",
+                            "date": "2024-02-24"
+                        },
+                        {
+                            "name": "Day off for Makha Bucha",
+                            "date": "2024-02-26"
+                        },
+                        {
+                            "name": "Chakri Day",
+                            "date": "2024-04-06"
+                        },
+                        {
+                            "name": "Day off for Chakri Day",
+                            "date": "2024-04-08"
+                        },
+                        {
+                            "name": "Songkran Holiday",
+                            "date": "2024-04-12"
+                        },
+                        {
+                            "name": "Songkran",
+                            "date": "2024-04-13"
+                        },
+                        {
+                            "name": "Songkran Holiday",
+                            "date": "2024-04-14"
+                        },
+                        {
+                            "name": "Songkran Holiday",
+                            "date": "2024-04-15"
+                        },
+                        {
+                            "name": "Songkran Observed",
+                            "date": "2024-04-16"
+                        },
+                        {
+                            "name": "Labor Day",
+                            "date": "2024-05-01"
+                        },
+                        {
+                            "name": "Coronation Day",
+                            "date": "2024-05-04"
+                        },
+                        {
+                            "name": "Day off for Coronation Day",
+                            "date": "2024-05-06"
+                        },
+                        {
+                            "name": "Royal Ploughing Ceremony Day",
+                            "date": "2024-05-06"
+                        },
+                        {
+                            "name": "Visakha Bucha",
+                            "date": "2024-05-22"
+                        },
+                        {
+                            "name": "Queen Suthida's Birthday",
+                            "date": "2024-06-03"
+                        },
+                        {
+                            "name": "Buddhist Lent Day",
+                            "date": "2024-07-20"
+                        },
+                        {
+                            "name": "Day off for Buddhist Lent Day",
+                            "date": "2024-07-22"
+                        },
+                        {
+                            "name": "King Vajiralongkorn's Birthday",
+                            "date": "2024-07-28"
+                        },
+                        {
+                            "name": "Day off for King Vajiralongkorn's Birthday",
+                            "date": "2024-07-29"
+                        },
+                        {
+                            "name": "The Queen's Birthday",
+                            "date": "2024-08-12"
+                        },
+                        {
+                            "name": "Anniversary of the Death of King Bhumibol",
+                            "date": "2024-10-13"
+                        },
+                        {
+                            "name": "Day off for Anniversary of the Death of King Bhumibol",
+                            "date": "2024-10-14"
+                        },
+                        {
+                            "name": "Chulalongkorn Day",
+                            "date": "2024-10-23"
+                        },
+                        {
+                            "name": "King Bhumibol's Birthday/Father's Day",
+                            "date": "2024-12-05"
+                        },
+                        {
+                            "name": "Constitution Day",
+                            "date": "2024-12-10"
+                        },
+                        {
+                            "name": "New Year Special Holiday",
+                            "date": "2024-12-30"
+                        },
+                        {
+                            "name": "New Year's Eve",
+                            "date": "2024-12-31"
+                        }
+                    ]
+                },
+                "AE_2023": {
+                    "holidays": [
+                        {
+                            "name": "New Year's Day",
+                            "date": "2023-01-01"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2023-04-20"
+                        },
+                        {
+                            "name": "Eid al-Fitr",
+                            "date": "2023-04-21"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2023-04-22"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2023-04-23"
+                        },
+                        {
+                            "name": "Arafat (Hajj) Day",
+                            "date": "2023-06-27"
+                        },
+                        {
+                            "name": "Eid al-Adha (Feast of Sacrifice)",
+                            "date": "2023-06-28"
+                        },
+                        {
+                            "name": "Eid al-Adha Holiday",
+                            "date": "2023-06-29"
+                        },
+                        {
+                            "name": "Eid al-Adha Holiday",
+                            "date": "2023-06-30"
+                        },
+                        {
+                            "name": "Al-Hijra (Islamic New Year)",
+                            "date": "2023-07-21"
+                        },
+                        {
+                            "name": "Mouloud Holiday",
+                            "date": "2023-09-29"
+                        },
+                        {
+                            "name": "National Day",
+                            "date": "2023-12-02"
+                        },
+                        {
+                            "name": "National Day Holiday",
+                            "date": "2023-12-03"
+                        }
+                    ]
+                },
+                "AU_2024": {
+                    "holidays": [
+                        {
+                            "name": "New Year's Day",
+                            "date": "2024-01-01"
+                        },
+                        {
+                            "name": "Australia Day",
+                            "date": "2024-01-26"
+                        },
+                        {
+                            "name": "Good Friday",
+                            "date": "2024-03-29"
+                        },
+                        {
+                            "name": "Easter Monday",
+                            "date": "2024-04-01"
+                        },
+                        {
+                            "name": "ANZAC Day",
+                            "date": "2024-04-25"
+                        },
+                        {
+                            "name": "Christmas Day",
+                            "date": "2024-12-25"
+                        },
+                        {
+                            "name": "Boxing Day",
+                            "date": "2024-12-26"
+                        }
+                    ]
+                },
+                "AE_2024": {
+                    "holidays": [
+                        {
+                            "name": "New Year's Day",
+                            "date": "2024-01-01"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2024-04-08"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2024-04-09"
+                        },
+                        {
+                            "name": "Eid al-Fitr",
+                            "date": "2024-04-10"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2024-04-11"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2024-04-12"
+                        },
+                        {
+                            "name": "Arafat (Hajj) Day",
+                            "date": "2024-06-15"
+                        },
+                        {
+                            "name": "Eid al-Adha (Feast of Sacrifice)",
+                            "date": "2024-06-16"
+                        },
+                        {
+                            "name": "Eid al-Adha Holiday",
+                            "date": "2024-06-17"
+                        },
+                        {
+                            "name": "Eid al-Adha Holiday",
+                            "date": "2024-06-18"
+                        },
+                        {
+                            "name": "Al-Hijra (Islamic New Year)",
+                            "date": "2024-07-07"
+                        },
+                        {
+                            "name": "Mouloud",
+                            "date": "2024-09-15"
+                        },
+                        {
+                            "name": "National Day",
+                            "date": "2024-12-02"
+                        },
+                        {
+                            "name": "National Day Holiday",
+                            "date": "2024-12-03"
+                        }
+                    ]
+                },
+                "MX_2024": {
+                    "holidays": [
+                        {
+                            "name": "New Year's Day",
+                            "date": "2024-01-01"
+                        },
+                        {
+                            "name": "Constitution Day",
+                            "date": "2024-02-05"
+                        },
+                        {
+                            "name": "Benito Ju\u00e1rez's Birthday Memorial",
+                            "date": "2024-03-18"
+                        },
+                        {
+                            "name": "Labor Day / May Day",
+                            "date": "2024-05-01"
+                        },
+                        {
+                            "name": "General Election Day",
+                            "date": "2024-06-02"
+                        },
+                        {
+                            "name": "Independence Day",
+                            "date": "2024-09-16"
+                        },
+                        {
+                            "name": "Inauguration day",
+                            "date": "2024-10-01"
+                        },
+                        {
+                            "name": "Revolution Day Memorial",
+                            "date": "2024-11-18"
+                        },
+                        {
+                            "name": "Christmas Day",
+                            "date": "2024-12-25"
+                        }
+                    ]
+                },
+                "AE_2020": {
+                    "holidays": [
+                        {
+                            "name": "New Year's Day",
+                            "date": "2020-01-01"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2020-05-22"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2020-05-23"
+                        },
+                        {
+                            "name": "Eid al-Fitr",
+                            "date": "2020-05-24"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2020-05-25"
+                        },
+                        {
+                            "name": "Eid al-Fitr Holiday",
+                            "date": "2020-05-26"
+                        },
+                        {
+                            "name": "Arafat (Hajj) Day",
+                            "date": "2020-07-30"
+                        },
+                        {
+                            "name": "Eid al-Adha (Feast of Sacrifice)",
+                            "date": "2020-07-31"
+                        },
+                        {
+                            "name": "Eid al-Adha Holiday",
+                            "date": "2020-07-31"
+                        },
+                        {
+                            "name": "Eid al-Adha Holiday",
+                            "date": "2020-08-01"
+                        },
+                        {
+                            "name": "Al-Hijra (Islamic New Year)",
+                            "date": "2020-08-23"
+                        },
+                        {
+                            "name": "Mouloud",
+                            "date": "2020-10-29"
+                        },
+                        {
+                            "name": "Day off for Commemoration Day",
+                            "date": "2020-12-01"
+                        },
+                        {
+                            "name": "National Day",
+                            "date": "2020-12-02"
+                        },
+                        {
+                            "name": "National Day Holiday",
+                            "date": "2020-12-03"
+                        }
+                    ]
+                },
+                "MX_2003": {
+                    "holidays": [
+                        {
+                            "name": "New Year's Day",
+                            "date": "2003-01-01"
+                        },
+                        {
+                            "name": "Constitution Day",
+                            "date": "2003-02-05"
+                        },
+                        {
+                            "name": "Benito Ju\u00e1rez's Birthday Memorial",
+                            "date": "2003-03-21"
+                        },
+                        {
+                            "name": "Labor Day / May Day",
+                            "date": "2003-05-01"
+                        },
+                        {
+                            "name": "Independence Day",
+                            "date": "2003-09-16"
+                        },
+                        {
+                            "name": "Revolution Day Memorial",
+                            "date": "2003-11-20"
+                        },
+                        {
+                            "name": "Christmas Day",
+                            "date": "2003-12-25"
+                        }
+                    ]
+                },
+                "IN_2025": {
+                    "holidays": [
+                        {
+                            "name": "Republic Day",
+                            "date": "2025-01-26"
+                        },
+                        {
+                            "name": "Maha Shivaratri/Shivaratri",
+                            "date": "2025-02-26"
+                        },
+                        {
+                            "name": "Holi",
+                            "date": "2025-03-14"
+                        },
+                        {
+                            "name": "Ramzan Id/Eid-ul-Fitar",
+                            "date": "2025-03-31"
+                        },
+                        {
+                            "name": "Mahavir Jayanti",
+                            "date": "2025-04-10"
+                        },
+                        {
+                            "name": "Good Friday",
+                            "date": "2025-04-18"
+                        },
+                        {
+                            "name": "Buddha Purnima/Vesak",
+                            "date": "2025-05-12"
+                        },
+                        {
+                            "name": "Bakrid/Eid ul-Adha",
+                            "date": "2025-06-07"
+                        },
+                        {
+                            "name": "Muharram/Ashura",
+                            "date": "2025-07-06"
+                        },
+                        {
+                            "name": "Independence Day",
+                            "date": "2025-08-15"
+                        },
+                        {
+                            "name": "Janmashtami",
+                            "date": "2025-08-16"
+                        },
+                        {
+                            "name": "Milad un-Nabi/Id-e-Milad",
+                            "date": "2025-09-05"
+                        },
+                        {
+                            "name": "Mahatma Gandhi Jayanti",
+                            "date": "2025-10-02"
+                        },
+                        {
+                            "name": "Dussehra",
+                            "date": "2025-10-02"
+                        },
+                        {
+                            "name": "Diwali/Deepavali",
+                            "date": "2025-10-20"
+                        },
+                        {
+                            "name": "Guru Nanak Jayanti",
+                            "date": "2025-11-05"
+                        },
+                        {
+                            "name": "Christmas",
+                            "date": "2025-12-25"
+                        }
+                    ]
+                },
+                "CN_2024": {
+                    "holidays": [
+                        {
+                            "name": "New Year's Day",
+                            "date": "2024-01-01"
+                        },
+                        {
+                            "name": "Chinese New Year",
+                            "date": "2024-02-10"
+                        },
+                        {
+                            "name": "Spring Festival Golden Week holiday",
+                            "date": "2024-02-11"
+                        },
+                        {
+                            "name": "Spring Festival Golden Week holiday",
+                            "date": "2024-02-12"
+                        },
+                        {
+                            "name": "Spring Festival Golden Week holiday",
+                            "date": "2024-02-13"
+                        },
+                        {
+                            "name": "Spring Festival Golden Week holiday",
+                            "date": "2024-02-14"
+                        },
+                        {
+                            "name": "Spring Festival Golden Week holiday",
+                            "date": "2024-02-15"
+                        },
+                        {
+                            "name": "Spring Festival Golden Week holiday",
+                            "date": "2024-02-16"
+                        },
+                        {
+                            "name": "Spring Festival Golden Week holiday",
+                            "date": "2024-02-17"
+                        },
+                        {
+                            "name": "International Women's Day",
+                            "date": "2024-03-08"
+                        },
+                        {
+                            "name": "Qing Ming Jie",
+                            "date": "2024-04-04"
+                        },
+                        {
+                            "name": "Qing Ming Jie holiday",
+                            "date": "2024-04-05"
+                        },
+                        {
+                            "name": "Qing Ming Jie holiday",
+                            "date": "2024-04-06"
+                        },
+                        {
+                            "name": "Labour Day",
+                            "date": "2024-05-01"
+                        },
+                        {
+                            "name": "Labour Day Holiday",
+                            "date": "2024-05-02"
+                        },
+                        {
+                            "name": "Labour Day Holiday",
+                            "date": "2024-05-03"
+                        },
+                        {
+                            "name": "Labour Day Holiday",
+                            "date": "2024-05-04"
+                        },
+                        {
+                            "name": "Youth Day",
+                            "date": "2024-05-04"
+                        },
+                        {
+                            "name": "Labour Day Holiday",
+                            "date": "2024-05-05"
+                        },
+                        {
+                            "name": "Dragon Boat Festival",
+                            "date": "2024-06-10"
+                        },
+                        {
+                            "name": "Mid-Autumn Festival holiday",
+                            "date": "2024-09-15"
+                        },
+                        {
+                            "name": "Mid-Autumn Festival holiday",
+                            "date": "2024-09-16"
+                        },
+                        {
+                            "name": "Mid-Autumn Festival",
+                            "date": "2024-09-17"
+                        },
+                        {
+                            "name": "National Day",
+                            "date": "2024-10-01"
+                        },
+                        {
+                            "name": "National Day Golden Week Holiday",
+                            "date": "2024-10-02"
+                        },
+                        {
+                            "name": "National Day Golden Week holiday",
+                            "date": "2024-10-03"
+                        },
+                        {
+                            "name": "National Day Golden Week holiday",
+                            "date": "2024-10-04"
+                        },
+                        {
+                            "name": "National Day Golden Week holiday",
+                            "date": "2024-10-05"
+                        },
+                        {
+                            "name": "National Day Golden Week holiday",
+                            "date": "2024-10-06"
+                        },
+                        {
+                            "name": "National Day Golden Week holiday",
+                            "date": "2024-10-07"
+                        }
+                    ]
+                },
+                "LK_2024": {
+                    "holidays": [
+                        {
+                            "name": "Tamil Thai Pongal Day",
+                            "date": "2024-01-15"
+                        },
+                        {
+                            "name": "Duruthu Full Moon Poya Day",
+                            "date": "2024-01-25"
+                        },
+                        {
+                            "name": "National Day",
+                            "date": "2024-02-04"
+                        },
+                        {
+                            "name": "Navam Full Moon Poya Day",
+                            "date": "2024-02-23"
+                        },
+                        {
+                            "name": "Mahasivarathri Day",
+                            "date": "2024-03-08"
+                        },
+                        {
+                            "name": "Madin Full Moon Poya Day",
+                            "date": "2024-03-24"
+                        },
+                        {
+                            "name": "Good Friday",
+                            "date": "2024-03-29"
+                        },
+                        {
+                            "name": "Eid al-Fitr",
+                            "date": "2024-04-10"
+                        },
+                        {
+                            "name": "Sinhala and Tamil New Year's Eve",
+                            "date": "2024-04-12"
+                        },
+                        {
+                            "name": "Sinhala and Tamil New Year's Day",
+                            "date": "2024-04-13"
+                        },
+                        {
+                            "name": "Sinhala and Tamil New Year Holiday",
+                            "date": "2024-04-15"
+                        },
+                        {
+                            "name": "Bak Full Moon Poya Day",
+                            "date": "2024-04-23"
+                        },
+                        {
+                            "name": "May Day",
+                            "date": "2024-05-01"
+                        },
+                        {
+                            "name": "Vesak Full Moon Poya Day",
+                            "date": "2024-05-23"
+                        },
+                        {
+                            "name": "Day after Vesak Full Moon Poya Day",
+                            "date": "2024-05-24"
+                        },
+                        {
+                            "name": "Eid al-Adha",
+                            "date": "2024-06-17"
+                        },
+                        {
+                            "name": "Poson Full Moon Poya Day",
+                            "date": "2024-06-21"
+                        },
+                        {
+                            "name": "Esala Full Moon Poya Day",
+                            "date": "2024-07-20"
+                        },
+                        {
+                            "name": "Nikini Full Moon Poya Day",
+                            "date": "2024-08-19"
+                        },
+                        {
+                            "name": "Milad-Un-Nabi (Holy Prophet's Birthday)",
+                            "date": "2024-09-16"
+                        },
+                        {
+                            "name": "Binara Full Moon Poya Day",
+                            "date": "2024-09-17"
+                        },
+                        {
+                            "name": "Vap Full Moon Poya Day",
+                            "date": "2024-10-17"
+                        },
+                        {
+                            "name": "Deepavali",
+                            "date": "2024-10-31"
+                        },
+                        {
+                            "name": "Il Full Moon Poya Day",
+                            "date": "2024-11-15"
+                        },
+                        {
+                            "name": "Unduvap Full Moon Poya Day",
+                            "date": "2024-12-14"
+                        },
+                        {
+                            "name": "Christmas Day",
+                            "date": "2024-12-25"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

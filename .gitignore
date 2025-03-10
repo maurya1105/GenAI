@@ -9,3 +9,4 @@ data
 /frontend/patches
 backend/user-activity.log
 backend/esops_documents.json
+.venv/

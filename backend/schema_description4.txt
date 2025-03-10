@@ -1,0 +1,473 @@
+
+---------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+Table 'SC_USER_GROUP' is used for storing User Group. Table 'SC_USER_GROUP' has 3 fields (columns) which are:  1. 'USR_GRP_ID' 2. 'VERSION' 3. 'OWNER_FLG'. Out of these fields, only one is a primary key; 'USR_GRP_ID' is the primary key for 'SC_USER_GROUP'
+'SC_USER_GROUP' is a Primary Table.
+
+Field Descriptions for table 'SC_USER_GROUP':
+
+  1. 'USR_GRP_ID' (CHAR):- field name for User Group,  'precision': None, 'nullable': False
+  2. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  3. 'OWNER_FLG' (CHAR):- field name for Owner,  'precision': None, 'nullable': False, 'values': W1  , D3  , D7  , DG  , D5  , D4  , D8  , UM  , D6  , F1  , CM  , D1  , X1  , C1  , D2  
+
+The child tables of 'SC_USER_GROUP' are ['SC_ACCESS_CNTL', 'CI_USR_GRP_SC', 'SC_USER_GROUP_L', 'SC_USR_GRP_PROF']. 
+(Generated when 'MAINT_OBJ_CD'=F1-USRGRP-SC)
+
+---------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+Table 'SC_ACCESS_CNTL' is used for storing User Group Access Control. Table 'SC_ACCESS_CNTL' has 5 fields (columns) which are:  1. 'USR_GRP_ID' 2. 'APP_SVC_ID' 3. 'ACCESS_MODE' 4. 'VERSION' 5. 'OWNER_FLG'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'USR_GRP_ID'  2. 'APP_SVC_ID'  3. 'ACCESS_MODE' . 
+Table 'SC_ACCESS_CNTL' has 2 foreign keys as listed:  'APP_SVC_ID' is foreign key from table 'CI_APP_SVC_ACC', and 'APP_SVC_ID' is foreign key from table 'SC_USR_GRP_PROF'.
+'SC_ACCESS_CNTL' is a child table of 'SC_USER_GROUP' table.
+
+Field Descriptions for table 'SC_ACCESS_CNTL':
+
+  1. 'USR_GRP_ID' (CHAR):- field name for User Group,  'precision': None, 'nullable': False
+  2. 'APP_SVC_ID' (CHAR):- field name for Application Service,  'precision': None, 'nullable': False
+  3. 'ACCESS_MODE' (CHAR):- field name for Access Mode,  'precision': None, 'nullable': False, 'values': W1EE, W1IM, W1IP, W1RA, W1QR, W1VA, SLOJ, C1AM, C1NU, C1ME, C1NC, C1WW, C1WM, W1DP, W1UR, W1UT, W1DT, W1DV, C1SE, W1AW, W1SB, W1RB, W1QA, W1UP, W1LO, W1UC, D1CN, D1WB, D1VT, W1DA, W1HL, W1CV, W1PP, W1PO, W1AG, W1PM, W1PR, W1CX, W1PT, W1PS, W1PU, W1CN, W1PG, C1UA, C1PA, C1PU, C1UR, C1PD, C1TU, C1CU, C1CA, C1RT, W1CP, W1PJ, W1CO, W1PI, W1CR, W1LD, W1PL, W1CT, W1PN, W1CS, W2SP, W1CE, W1PA, C1ST, C1SP, C1SR, C1WF, C1PI, C1SC, C1SA, C1WG, D1OP, D1NI, D1IC, D1WF, D1IR, D1FE, D1EV, W1GR, W1PC, W1PB, W1CL, W1PF, W1PD, W1PE, W1TM, W1GE, W1KR, C1XS, C1SV, C1IG, C1XP, C1PM, C1CD, C1SO, C1CT, C1QE, D7VC, W1CA, C1VL, D2JF, D2WB, W1SU, W1OP, W1GA, W1OT, COA , C1GR, C1WN, C1WP, C1EC, C1DN, C1UP, C1CE, C1AW, W1OS, W1FT, W1OF, W1OE, W1SP, W1FU, W1SO, W1BP, W1SR, W1KA, W1FZ, W1ST, W1SS, W1SE, W1SD, W1FN, W1SH, W1WO, W1FO, W1SI, W1FR, W1OD, W1OB, W1FD, W1SA, W1RV, W1AS, W1RU, W1WA, W1AV, W1RZ, W1WC, W1NR, W1RY, W1FA, W1ER, W1RL, W1ET, W1RN, W1AR, W1RT, W1RS, W1AN, W1EV, W1RP, W1RO, W1AP, W1EX, W1RR, W1RC, W1AA, W1RE, C1AL, C1CS, C1WR, C1AG, C1AE, C1DR, C1OD, C1ED, C1AO, C1AV, C1EP, C1IE, C1CR, C1AU, C1WS, D2RC, D2WC, WMHP, WMHT, W1AD, W1IS, W1RD, W1AC, W1EN, W1EM, W1IU, W1AE, W1NA, W1RJ, W1RI, W1MR, W1VC, W1EA, W1VE, W1VD, W1IN, W1AH, C1WC, C1OP, C1IR, SLPE, SLWA, SLCE, SLOE, SLRR, SLDI, SLRW, SLPA, SLRD, SLAS, SLWJ, SLOB, SLRJ, SLRE, SLPD, SLWR, SLWE, CMAX, SLWI, SLRP, DF  , INAC, CR  , C1AT, MELU, C1AS, FC  , C1AR, STAP, ASAR, D1CI, W1AT, ISS , WO  , CAEV, RB  , G   , C1RV, C1IV, C1IT, XQTE, D1CA, D1CC, D1CD, F1RS, FWRD, ASSV, CPSA, F1NR, S   , TD  , D1AP, D1MR, D1VO, D1VR, D1ON, D2AP, D2WR, D2ST, D2PR, PMAL, ST  , RP  , F1GO, F1IN, F1MN, F1MC, ENBL, F1FC, C1WA, VA  , PMAP, C1PE, F   , C1AP, SAPT, D1WW, D1RT, D1UP, DS  , DQDT, IC  , ISSA, CL  , C1VD, C1VE, RO  , QPSA, SRQ , F1NA, D1CO, D1CP, D1PM, D1US, D1ER, D1NP, DB  , FA  , C1IP, BK  , C1IN, C1RS, C1RQ, RWO , D1PF, D1SR, D1EX, APLY, F1AA, F1RP, F1RR, D1OE, RV  , PD  , GQDT, C1SU, C1CO, RPSA, C1CN, C1SS, C1SN, PC  , D1RM, D1KR, D1SU, D1PC, D1SS, D1CU, D1CT, DPSA, C1PC, UN  , AF  , BDP , C1CF, CO  , F1ER, D   , F1MR, TR  , F1MI, A   , BNDL, ASSG, XSAR, APST, CRE , FQTE, CF  , APSA, STRT, DQTE, D1RP, D1WT, CPAP, BDR , C1WT, SY  , RSA , UPSL, TC  , ID  , RERD, C1FS, C1NP, C1NR, PF  , CK  , D1PR, D1PS, D1CM, D1LR, D1AI, D1DT, D1OF, LD  , C1SG, PMSS, PMST, C1AI, C1ID, C1AA, C1AC, C1IC, RTRU, C1AD, CNSL, PMRP, C1RE, PMRL, C1RI, D1CS, F1AC, D2CD, D2OA, D2ID, D1MA, D1AD, D1AC, D1WA, D1AA, D1VL, D1FK, D1KA, QB  , D1CR, D1HD, D1VD, D1RE, D1HB, D1RD, D1VE, D2CE, D2OD, D2AI, D2SC, TGEV, F1SY, F1SU, CA  , F1EX, F1DE, R   , F1DC, C   , OTH , C1PP, HO  , C1PR, RQTE, C1PS, FTLU, DL  , C1UC, C1CB, D1AG, D1SP, D1AF, TSLM, C1DT, SP  , TSLI, TRDR, CS  , C1NO, C1EX, ADS , C1RJ, ABD , PM  , C1LK, D2SJ, D2CI, D1AM, D1II, D1VX, D1SC, D2OO, AD  , CRF , C1SD, UPAP, TO  , D1RB, TRUP, C1DA, C1TE, F1OK, CAB , D1AZ, D1DC, D1ME, D1DD, D1DR, D1DS, D1PA, D1FC, D1LD, D1NK, F1DS, REOP, F1PR, D1RR, D1AR, F1CA, F1SR, SV  , F1MA, PE  , C1VX, SBCK, F1DN, CQTE, D1IE, DE  , D2EE, SE  , D2SM, D2SS, D2EX, DD  , F1ED, D2CL, D2FZ, C1MS, GQTE, E   , AC  , CAN , C1WD, C1ER, C1OB, RMVE
+  4. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  5. 'OWNER_FLG' (CHAR):- field name for Owner,  'precision': None, 'nullable': False, 'values': W1  , D3  , D7  , DG  , D5  , D4  , D8  , UM  , D6  , F1  , CM  , D1  , X1  , C1  , D2  
+
+--------------------------------------------------------------------------
+
+Table 'CI_USR_GRP_SC' is used for storing User Group Security Type. Table 'CI_USR_GRP_SC' has 5 fields (columns) which are:  1. 'USR_GRP_ID' 2. 'APP_SVC_ID' 3. 'SC_TYPE_CD' 4. 'AUTH_LEVEL_NBR' 5. 'VERSION'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'APP_SVC_ID'  2. 'USR_GRP_ID'  3. 'SC_TYPE_CD' . 
+Table 'CI_USR_GRP_SC' has 3 foreign keys as listed:  'SC_TYPE_CD' is foreign key from table 'CI_APP_SVC_SCTY', 'APP_SVC_ID' is foreign key from table 'SC_USR_GRP_PROF', and 'AUTH_LEVEL_NBR' is foreign key from table 'CI_SC_AUTH_LVL'.
+'CI_USR_GRP_SC' is a child table of 'SC_USER_GROUP' table.
+
+Field Descriptions for table 'CI_USR_GRP_SC':
+
+  1. 'USR_GRP_ID' (CHAR):- field name for User Group,  'precision': None, 'nullable': False
+  2. 'APP_SVC_ID' (CHAR):- field name for Application Service,  'precision': None, 'nullable': False
+  3. 'SC_TYPE_CD' (CHAR):- field name for Security Type,  'precision': None, 'nullable': False
+  4. 'AUTH_LEVEL_NBR' (CHAR):- field name for Authorization Level,  'precision': None, 'nullable': False
+  5. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'SC_USER_GROUP_L' is used for storing User Group Language. Table 'SC_USER_GROUP_L' has 5 fields (columns) which are:  1. 'USR_GRP_ID' 2. 'LANGUAGE_CD' 3. 'DESCR' 4. 'VERSION' 5. 'OWNER_FLG'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'USR_GRP_ID'  2. 'LANGUAGE_CD' . 
+Table 'SC_USER_GROUP_L' has 2 foreign keys as listed:  'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE', and 'USR_GRP_ID' is foreign key from table 'SC_USER_GROUP'.
+'SC_USER_GROUP_L' is a child table of 'SC_USER_GROUP' table.
+
+Field Descriptions for table 'SC_USER_GROUP_L':
+
+  1. 'USR_GRP_ID' (CHAR):- field name for User Group,  'precision': None, 'nullable': False
+  2. 'LANGUAGE_CD' (CHAR):- field name for Language,  'precision': None, 'nullable': False, 'values': INE , JPN , UKE , FRA , POR , CFR , GER , DUT , CNE , ESP , ENG 
+  3. 'DESCR' (VARCHAR2):- field name for Description,  'precision': None, 'nullable': False
+  4. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  5. 'OWNER_FLG' (CHAR):- field name for Owner,  'precision': None, 'nullable': False, 'values': W1  , D3  , D7  , DG  , D5  , D4  , D8  , UM  , D6  , F1  , CM  , D1  , X1  , C1  , D2  
+
+--------------------------------------------------------------------------
+
+Table 'SC_USR_GRP_PROF' is used for storing User Group Profile. Table 'SC_USR_GRP_PROF' has 5 fields (columns) which are:  1. 'USR_GRP_ID' 2. 'APP_SVC_ID' 3. 'EXPIRATION_DT' 4. 'VERSION' 5. 'OWNER_FLG'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'APP_SVC_ID'  2. 'USR_GRP_ID' . 
+Table 'SC_USR_GRP_PROF' has 2 foreign keys as listed:  'USR_GRP_ID' is foreign key from table 'SC_USER_GROUP', and 'APP_SVC_ID' is foreign key from table 'SC_APP_SERVICE'.
+'SC_USR_GRP_PROF' is a child table of 'SC_USER_GROUP' table.
+
+Field Descriptions for table 'SC_USR_GRP_PROF':
+
+  1. 'USR_GRP_ID' (CHAR):- field name for User Group,  'precision': None, 'nullable': False
+  2. 'APP_SVC_ID' (CHAR):- field name for Application Service,  'precision': None, 'nullable': False
+  3. 'EXPIRATION_DT' (DATE):- field name for Expiration Date,  'precision': None, 'nullable': True
+  4. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  5. 'OWNER_FLG' (CHAR):- field name for Owner,  'precision': None, 'nullable': False, 'values': W1  , D3  , D7  , DG  , D5  , D4  , D8  , UM  , D6  , F1  , CM  , D1  , X1  , C1  , D2  
+---------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+Table 'C1_CALC_RULE_CRT' is used for storing Calc Rule Eligibility Criteria. Table 'C1_CALC_RULE_CRT' has 20 fields (columns) which are:  1. 'CALC_GRP_CD' 2. 'CALC_RULE_CD' 3. 'CR_CRT_EXEC_SEQ' 4. 'CR_CRT_FLD_TYPE_FLG' 5. 'CR_CRT_CMP_OPR_FLG' 6. 'CRT_COMP_VAL' 7. 'CR_CRT_TRUE_FLG' 8. 'CR_CRT_FALSE_FLG' 9. 'CR_CRT_INSF_FLG' 10. 'CRT_FLD_ALG_CD' 11. 'CHAR_TYPE_CD' 12. 'CR_CRT_CHAR_ENT_FLG' 13. 'CONT_QTY_TYPE_CD' 14. 'BF_CD' 15. 'UOM_CD' 16. 'TOU_CD' 17. 'SQI_CD' 18. 'BUS_OBJ_CD' 19. 'BO_DATA_AREA' 20. 'VERSION'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'CALC_RULE_CD'  2. 'CR_CRT_EXEC_SEQ'  3. 'CALC_GRP_CD' . 
+Table 'C1_CALC_RULE_CRT' has 10 foreign keys as listed:  'BUS_OBJ_CD' is foreign key from table 'F1_BUS_OBJ', 'CALC_GRP_CD' is foreign key from table 'C1_CALC_GRP', 'TOU_CD' is foreign key from table 'CI_TOU', 'CRT_FLD_ALG_CD' is foreign key from table 'CI_ALG', 'CALC_RULE_CD' is foreign key from table 'C1_CALC_RULE', 'SQI_CD' is foreign key from table 'CI_SQI', 'UOM_CD' is foreign key from table 'CI_UOM', 'CONT_QTY_TYPE_CD' is foreign key from table 'CI_CONT_QTY_TYP', 'BF_CD' is foreign key from table 'CI_BF', and 'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_TYPE'.
+'C1_CALC_RULE_CRT' is a Primary Table.
+
+Field Descriptions for table 'C1_CALC_RULE_CRT':
+
+  1. 'CALC_GRP_CD' (VARCHAR2):- field name for Calculation Group,  'precision': None, 'nullable': False
+  2. 'CALC_RULE_CD' (VARCHAR2):- field name for Calculation Rule,  'precision': None, 'nullable': False
+  3. 'CR_CRT_EXEC_SEQ' (NUMBER):- field name for Sequence,  'precision': 5, 'nullable': False
+  4. 'CR_CRT_FLD_TYPE_FLG' (CHAR):- field name for Criteria Field Type,  'precision': None, 'nullable': False, 'values': C1BF, C1CH, C1SQ, C1CQ, C1CL, C1HQ, C1AL
+  5. 'CR_CRT_CMP_OPR_FLG' (CHAR):- field name for Comparison Operator,  'precision': None, 'nullable': False, 'values': C1GT, C1IN, C1NE, C1BW, C1GE, C1LE, C1BL, C1EQ, C1LT
+  6. 'CRT_COMP_VAL' (VARCHAR2):- field name for Criteria Comparison Value,  'precision': None, 'nullable': False
+  7. 'CR_CRT_TRUE_FLG' (CHAR):- field name for If True,  'precision': None, 'nullable': False, 'values': C1AR, C1CK, C1DN
+  8. 'CR_CRT_FALSE_FLG' (CHAR):- field name for If False,  'precision': None, 'nullable': False, 'values': C1AR, C1DN, C1CK
+  9. 'CR_CRT_INSF_FLG' (CHAR):- field name for If Insufficient Data,  'precision': None, 'nullable': False, 'values': C1CK, C1DN, C1ER, C1AR
+  10. 'CRT_FLD_ALG_CD' (CHAR):- field name for Criteria Field Algorithm,  'precision': None, 'nullable': False
+  11. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type,  'precision': None, 'nullable': False
+  12. 'CR_CRT_CHAR_ENT_FLG' (CHAR):- field name for Characteristic Entity,  'precision': None, 'nullable': False, 'values': C1PR, C1PS, C1SP, C1CH, C1AC, C1BL, C1SA
+  13. 'CONT_QTY_TYPE_CD' (CHAR):- field name for Contract Quantity Type,  'precision': None, 'nullable': False
+  14. 'BF_CD' (CHAR):- field name for Bill Factor,  'precision': None, 'nullable': False
+  15. 'UOM_CD' (VARCHAR2):- field name for Unit of Measure,  'precision': None, 'nullable': False
+  16. 'TOU_CD' (VARCHAR2):- field name for Time of Use,  'precision': None, 'nullable': False
+  17. 'SQI_CD' (VARCHAR2):- field name for SQI,  'precision': None, 'nullable': False
+  18. 'BUS_OBJ_CD' (CHAR):- field name for Business Object,  'precision': None, 'nullable': False
+  19. 'BO_DATA_AREA' (CLOB):- field name for Business Object Data Area,  'precision': None, 'nullable': True
+  20. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+
+The child tables of 'C1_CALC_RULE_CRT' are ['C1_CALC_RULE_CRT_L', 'C1_CALC_RULE_CRT_CHAR']. 
+(Generated when 'MAINT_OBJ_CD'=C1-CALC-R-EL)
+
+---------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+Table 'C1_CALC_RULE_CRT_L' is used for storing Calc Rule Elig Criteria Language. Table 'C1_CALC_RULE_CRT_L' has 7 fields (columns) which are:  1. 'CALC_GRP_CD' 2. 'CALC_RULE_CD' 3. 'CR_CRT_EXEC_SEQ' 4. 'LANGUAGE_CD' 5. 'DESCR100' 6. 'DESCRLONG' 7. 'VERSION'. Out of these fields, 4 are primary keys. The composite primary keys are:  1. 'LANGUAGE_CD'  2. 'CALC_GRP_CD'  3. 'CALC_RULE_CD'  4. 'CR_CRT_EXEC_SEQ' . 
+Table 'C1_CALC_RULE_CRT_L' has 2 foreign keys as listed:  'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE', and 'CR_CRT_EXEC_SEQ' is foreign key from table 'C1_CALC_RULE_CRT'.
+'C1_CALC_RULE_CRT_L' is a child table of 'C1_CALC_RULE_CRT' table.
+
+Field Descriptions for table 'C1_CALC_RULE_CRT_L':
+
+  1. 'CALC_GRP_CD' (VARCHAR2):- field name for Calculation Group,  'precision': None, 'nullable': False
+  2. 'CALC_RULE_CD' (VARCHAR2):- field name for Calculation Rule,  'precision': None, 'nullable': False
+  3. 'CR_CRT_EXEC_SEQ' (NUMBER):- field name for Sequence,  'precision': 5, 'nullable': False
+  4. 'LANGUAGE_CD' (CHAR):- field name for Language,  'precision': None, 'nullable': False, 'values': INE , JPN , UKE , FRA , POR , CFR , GER , DUT , CNE , ESP , ENG 
+  5. 'DESCR100' (VARCHAR2):- field name for Description,  'precision': None, 'nullable': False
+  6. 'DESCRLONG' (VARCHAR2):- field name for Detailed Description,  'precision': None, 'nullable': False
+  7. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'C1_CALC_RULE_CRT_CHAR' is used for storing Calc Rule Elig Criteria Characteristics. Table 'C1_CALC_RULE_CRT_CHAR' has 14 fields (columns) which are:  1. 'CALC_GRP_CD' 2. 'CALC_RULE_CD' 3. 'CR_CRT_EXEC_SEQ' 4. 'CHAR_TYPE_CD' 5. 'SEQ_NUM' 6. 'CHAR_VAL' 7. 'ADHOC_CHAR_VAL' 8. 'CHAR_VAL_FK1' 9. 'CHAR_VAL_FK2' 10. 'CHAR_VAL_FK3' 11. 'CHAR_VAL_FK4' 12. 'CHAR_VAL_FK5' 13. 'VERSION' 14. 'SRCH_CHAR_VAL'. Out of these fields, 5 are primary keys. The composite primary keys are:  1. 'CR_CRT_EXEC_SEQ'  2. 'CHAR_TYPE_CD'  3. 'SEQ_NUM'  4. 'CALC_GRP_CD'  5. 'CALC_RULE_CD' . 
+Table 'C1_CALC_RULE_CRT_CHAR' has 3 foreign keys as listed:  'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_VAL', 'CR_CRT_EXEC_SEQ' is foreign key from table 'C1_CALC_RULE_CRT', and 'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_TYPE'.
+'C1_CALC_RULE_CRT_CHAR' is a child table of 'C1_CALC_RULE_CRT' table.
+
+Field Descriptions for table 'C1_CALC_RULE_CRT_CHAR':
+
+  1. 'CALC_GRP_CD' (VARCHAR2):- field name for Calculation Group,  'precision': None, 'nullable': False
+  2. 'CALC_RULE_CD' (VARCHAR2):- field name for Calculation Rule,  'precision': None, 'nullable': False
+  3. 'CR_CRT_EXEC_SEQ' (NUMBER):- field name for Sequence,  'precision': 5, 'nullable': False
+  4. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type,  'precision': None, 'nullable': False
+  5. 'SEQ_NUM' (NUMBER):- field name for Sequence,  'precision': 3, 'nullable': False
+  6. 'CHAR_VAL' (CHAR):- field name for Characteristic Value,  'precision': None, 'nullable': False
+  7. 'ADHOC_CHAR_VAL' (VARCHAR2):- field name for Adhoc Characteristic Value,  'precision': None, 'nullable': False
+  8. 'CHAR_VAL_FK1' (VARCHAR2):- field name for Characteristic Value FK 1,  'precision': None, 'nullable': False
+  9. 'CHAR_VAL_FK2' (VARCHAR2):- field name for Characteristic Value FK 2,  'precision': None, 'nullable': False
+  10. 'CHAR_VAL_FK3' (VARCHAR2):- field name for Characteristic Value FK 3,  'precision': None, 'nullable': False
+  11. 'CHAR_VAL_FK4' (VARCHAR2):- field name for Characteristic Value FK 4,  'precision': None, 'nullable': False
+  12. 'CHAR_VAL_FK5' (VARCHAR2):- field name for Characteristic Value FK 5,  'precision': None, 'nullable': False
+  13. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  14. 'SRCH_CHAR_VAL' (VARCHAR2):- field name for Search Characteristic Value,  'precision': None, 'nullable': False
+---------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+Table 'C1_CALC_RULE' is used for storing Calculation Rule. Table 'C1_CALC_RULE' has 15 fields (columns) which are:  1. 'CALC_GRP_CD' 2. 'CALC_RULE_CD' 3. 'CR_EXEC_SEQ' 4. 'REF_CALC_GRP_CD' 5. 'CALC_RULE_STEP_ALG_CD' 6. 'CALC_RULE_VAL_ALG_CD' 7. 'UOM_CD' 8. 'TOU_CD' 9. 'SQI_CD' 10. 'ITEM_TYPE_CD' 11. 'BF_CD' 12. 'BUS_OBJ_CD' 13. 'BO_DATA_AREA' 14. 'VERSION' 15. 'DST_ID'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'CALC_GRP_CD'  2. 'CALC_RULE_CD' . 
+Table 'C1_CALC_RULE' has 11 foreign keys as listed:  'CALC_RULE_STEP_ALG_CD' is foreign key from table 'CI_ALG', 'ITEM_TYPE_CD' is foreign key from table 'CI_ITEM_TYPE', 'BF_CD' is foreign key from table 'CI_BF', 'SQI_CD' is foreign key from table 'CI_SQI', 'CALC_RULE_VAL_ALG_CD' is foreign key from table 'CI_ALG', 'REF_CALC_GRP_CD' is foreign key from table 'C1_CALC_GRP', 'BUS_OBJ_CD' is foreign key from table 'F1_BUS_OBJ', 'DST_ID' is foreign key from table 'CI_DST_CODE', 'TOU_CD' is foreign key from table 'CI_TOU', 'CALC_GRP_CD' is foreign key from table 'C1_CALC_GRP', and 'UOM_CD' is foreign key from table 'CI_UOM'.
+'C1_CALC_RULE' is a Primary Table.
+
+Field Descriptions for table 'C1_CALC_RULE':
+
+  1. 'CALC_GRP_CD' (VARCHAR2):- field name for Calculation Group,  'precision': None, 'nullable': False
+  2. 'CALC_RULE_CD' (VARCHAR2):- field name for Calculation Rule,  'precision': None, 'nullable': False
+  3. 'CR_EXEC_SEQ' (NUMBER):- field name for Sequence,  'precision': 5, 'nullable': False
+  4. 'REF_CALC_GRP_CD' (VARCHAR2):- field name for Calculation Group,  'precision': None, 'nullable': False
+  5. 'CALC_RULE_STEP_ALG_CD' (CHAR):- field name for Step Multiplier Algorithm,  'precision': None, 'nullable': False
+  6. 'CALC_RULE_VAL_ALG_CD' (CHAR):- field name for Algorithm,  'precision': None, 'nullable': False
+  7. 'UOM_CD' (VARCHAR2):- field name for Unit of Measure,  'precision': None, 'nullable': False
+  8. 'TOU_CD' (VARCHAR2):- field name for Time of Use,  'precision': None, 'nullable': False
+  9. 'SQI_CD' (VARCHAR2):- field name for SQI,  'precision': None, 'nullable': False
+  10. 'ITEM_TYPE_CD' (VARCHAR2):- field name for Item Type,  'precision': None, 'nullable': False
+  11. 'BF_CD' (CHAR):- field name for Bill Factor,  'precision': None, 'nullable': False
+  12. 'BUS_OBJ_CD' (CHAR):- field name for Business Object,  'precision': None, 'nullable': False
+  13. 'BO_DATA_AREA' (CLOB):- field name for Business Object Data Area,  'precision': None, 'nullable': True
+  14. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  15. 'DST_ID' (CHAR):- field name for Distribution Code,  'precision': None, 'nullable': False
+
+The child tables of 'C1_CALC_RULE' are ['C1_CALC_RULE_TRGT_CAT', 'C1_CALC_RULE_CHAR', 'C1_CALC_RULE_L', 'C1_CALC_RULE_MBR_CAT']. 
+(Generated when 'MAINT_OBJ_CD'=C1-CALC-RULE)
+
+---------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+Table 'C1_CALC_RULE_TRGT_CAT' is used for storing Calculation Rule Target Category. Table 'C1_CALC_RULE_TRGT_CAT' has 5 fields (columns) which are:  1. 'CALC_GRP_CD' 2. 'CALC_RULE_CD' 3. 'CL_CAT_TYPE_CD' 4. 'CL_CAT_VAL' 5. 'VERSION'. Out of these fields, 4 are primary keys. The composite primary keys are:  1. 'CALC_RULE_CD'  2. 'CL_CAT_VAL'  3. 'CL_CAT_TYPE_CD'  4. 'CALC_GRP_CD' . 
+Table 'C1_CALC_RULE_TRGT_CAT' has 2 foreign keys as listed:  'CL_CAT_VAL' is foreign key from table 'C1_CL_CAT_VAL', and 'CALC_GRP_CD' is foreign key from table 'C1_CALC_RULE'.
+'C1_CALC_RULE_TRGT_CAT' is a child table of 'C1_CALC_RULE' table.
+
+Field Descriptions for table 'C1_CALC_RULE_TRGT_CAT':
+
+  1. 'CALC_GRP_CD' (VARCHAR2):- field name for Calculation Group,  'precision': None, 'nullable': False
+  2. 'CALC_RULE_CD' (VARCHAR2):- field name for Calculation Rule,  'precision': None, 'nullable': False
+  3. 'CL_CAT_TYPE_CD' (VARCHAR2):- field name for Category Type,  'precision': None, 'nullable': False
+  4. 'CL_CAT_VAL' (VARCHAR2):- field name for Category Value,  'precision': None, 'nullable': False
+  5. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'C1_CALC_RULE_CHAR' is used for storing Calculation Rule Characteristics. Table 'C1_CALC_RULE_CHAR' has 12 fields (columns) which are:  1. 'CALC_GRP_CD' 2. 'CALC_RULE_CD' 3. 'CHAR_TYPE_CD' 4. 'CHAR_VAL' 5. 'ADHOC_CHAR_VAL' 6. 'CHAR_VAL_FK1' 7. 'CHAR_VAL_FK2' 8. 'CHAR_VAL_FK3' 9. 'CHAR_VAL_FK4' 10. 'CHAR_VAL_FK5' 11. 'VERSION' 12. 'SRCH_CHAR_VAL'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'CALC_RULE_CD'  2. 'CHAR_TYPE_CD'  3. 'CALC_GRP_CD' . 
+Table 'C1_CALC_RULE_CHAR' has 3 foreign keys as listed:  'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_VAL', 'CALC_RULE_CD' is foreign key from table 'C1_CALC_RULE', and 'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_TYPE'.
+'C1_CALC_RULE_CHAR' is a child table of 'C1_CALC_RULE' table.
+
+Field Descriptions for table 'C1_CALC_RULE_CHAR':
+
+  1. 'CALC_GRP_CD' (VARCHAR2):- field name for Calculation Group,  'precision': None, 'nullable': False
+  2. 'CALC_RULE_CD' (VARCHAR2):- field name for Calculation Rule,  'precision': None, 'nullable': False
+  3. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type,  'precision': None, 'nullable': False
+  4. 'CHAR_VAL' (CHAR):- field name for Characteristic Value,  'precision': None, 'nullable': False
+  5. 'ADHOC_CHAR_VAL' (VARCHAR2):- field name for Adhoc Characteristic Value,  'precision': None, 'nullable': False
+  6. 'CHAR_VAL_FK1' (VARCHAR2):- field name for Characteristic Value FK 1,  'precision': None, 'nullable': False
+  7. 'CHAR_VAL_FK2' (VARCHAR2):- field name for Characteristic Value FK 2,  'precision': None, 'nullable': False
+  8. 'CHAR_VAL_FK3' (VARCHAR2):- field name for Characteristic Value FK 3,  'precision': None, 'nullable': False
+  9. 'CHAR_VAL_FK4' (VARCHAR2):- field name for Characteristic Value FK 4,  'precision': None, 'nullable': False
+  10. 'CHAR_VAL_FK5' (VARCHAR2):- field name for Characteristic Value FK 5,  'precision': None, 'nullable': False
+  11. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  12. 'SRCH_CHAR_VAL' (VARCHAR2):- field name for Search Characteristic Value,  'precision': None, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'C1_CALC_RULE_L' is used for storing Calculation Rule Language. Table 'C1_CALC_RULE_L' has 7 fields (columns) which are:  1. 'CALC_GRP_CD' 2. 'CALC_RULE_CD' 3. 'LANGUAGE_CD' 4. 'DESCR_TMPLT' 5. 'DESCR100' 6. 'DESCRLONG' 7. 'VERSION'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'LANGUAGE_CD'  2. 'CALC_GRP_CD'  3. 'CALC_RULE_CD' . 
+Table 'C1_CALC_RULE_L' has 2 foreign keys as listed:  'CALC_GRP_CD' is foreign key from table 'C1_CALC_RULE', and 'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE'.
+'C1_CALC_RULE_L' is a child table of 'C1_CALC_RULE' table.
+
+Field Descriptions for table 'C1_CALC_RULE_L':
+
+  1. 'CALC_GRP_CD' (VARCHAR2):- field name for Calculation Group,  'precision': None, 'nullable': False
+  2. 'CALC_RULE_CD' (VARCHAR2):- field name for Calculation Rule,  'precision': None, 'nullable': False
+  3. 'LANGUAGE_CD' (CHAR):- field name for Language,  'precision': None, 'nullable': False, 'values': INE , JPN , UKE , FRA , POR , CFR , GER , DUT , CNE , ESP , ENG 
+  4. 'DESCR_TMPLT' (VARCHAR2):- field name for Description On Bill,  'precision': None, 'nullable': False
+  5. 'DESCR100' (VARCHAR2):- field name for Description,  'precision': None, 'nullable': False
+  6. 'DESCRLONG' (VARCHAR2):- field name for Detailed Description,  'precision': None, 'nullable': False
+  7. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'C1_CALC_RULE_MBR_CAT' is used for storing Calculation Rule Member Category. Table 'C1_CALC_RULE_MBR_CAT' has 5 fields (columns) which are:  1. 'CALC_GRP_CD' 2. 'CALC_RULE_CD' 3. 'CL_CAT_TYPE_CD' 4. 'CL_CAT_VAL' 5. 'VERSION'. Out of these fields, 4 are primary keys. The composite primary keys are:  1. 'CALC_RULE_CD'  2. 'CL_CAT_TYPE_CD'  3. 'CL_CAT_VAL'  4. 'CALC_GRP_CD' . 
+Table 'C1_CALC_RULE_MBR_CAT' has 2 foreign keys as listed:  'CL_CAT_VAL' is foreign key from table 'C1_CL_CAT_VAL', and 'CALC_RULE_CD' is foreign key from table 'C1_CALC_RULE'.
+'C1_CALC_RULE_MBR_CAT' is a child table of 'C1_CALC_RULE' table.
+
+Field Descriptions for table 'C1_CALC_RULE_MBR_CAT':
+
+  1. 'CALC_GRP_CD' (VARCHAR2):- field name for Calculation Group,  'precision': None, 'nullable': False
+  2. 'CALC_RULE_CD' (VARCHAR2):- field name for Calculation Rule,  'precision': None, 'nullable': False
+  3. 'CL_CAT_TYPE_CD' (VARCHAR2):- field name for Category Type,  'precision': None, 'nullable': False
+  4. 'CL_CAT_VAL' (VARCHAR2):- field name for Category Value,  'precision': None, 'nullable': False
+  5. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+---------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+Table 'SC_USER' is used for storing User. Table 'SC_USER' has 24 fields (columns) which are:  1. 'USER_ID' 2. 'LANGUAGE_CD' 3. 'FIRST_NAME' 4. 'LAST_NAME' 5. 'TNDR_SOURCE_CD' 6. 'VERSION' 7. 'DISP_PROF_CD' 8. 'TD_ENTRY_AGE_DAYS1' 9. 'TD_ENTRY_AGE_DAYS2' 10. 'ACCESS_GRP_CD' 11. 'EMAILID' 12. 'USER_TYPE_FLG' 13. 'PORTAL_OVRD_USER' 14. 'FAV_OVRD_USER' 15. 'DASHBOARD_WIDTH' 16. 'HOME_NAV_OPT_CD' 17. 'DISP_ALL_PREM_SW' 18. 'OWNER_FLG' 19. 'TIME_ZONE_CD' 20. 'EXT_USER_ID' 21. 'USER_ENABLE_FLG' 22. 'F1_SECURITY_HASH' 23. 'DASHBOARD_LOC_FLG' 24. 'DASHBOARD_STATE_FLG'. Out of these fields, only one is a primary key; 'USER_ID' is the primary key for 'SC_USER'. 
+Table 'SC_USER' has 8 foreign keys as listed:  'DISP_PROF_CD' is foreign key from table 'CI_DISP_PROF', 'HOME_NAV_OPT_CD' is foreign key from table 'CI_NAV_OPT', 'FAV_OVRD_USER' is foreign key from table 'SC_USER', 'TIME_ZONE_CD' is foreign key from table 'CI_TIME_ZONE', 'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE', 'TNDR_SOURCE_CD' is foreign key from table 'CI_TNDR_SRCE', 'PORTAL_OVRD_USER' is foreign key from table 'SC_USER', and 'ACCESS_GRP_CD' is foreign key from table 'CI_ACC_GRP'.
+'SC_USER' is a Primary Table.
+
+Field Descriptions for table 'SC_USER':
+
+  1. 'USER_ID' (CHAR):- field name for User,  'precision': None, 'nullable': False
+  2. 'LANGUAGE_CD' (CHAR):- field name for Language,  'precision': None, 'nullable': False, 'values': INE , JPN , UKE , FRA , POR , CFR , GER , DUT , CNE , ESP , ENG 
+  3. 'FIRST_NAME' (VARCHAR2):- field name for First Name,  'precision': None, 'nullable': False
+  4. 'LAST_NAME' (VARCHAR2):- field name for Last Name,  'precision': None, 'nullable': False
+  5. 'TNDR_SOURCE_CD' (CHAR):- field name for Tender Source,  'precision': None, 'nullable': False
+  6. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  7. 'DISP_PROF_CD' (CHAR):- field name for Display Profile,  'precision': None, 'nullable': False
+  8. 'TD_ENTRY_AGE_DAYS1' (NUMBER):- field name for Lower Age Limit for Yellow Bar,  'precision': 3, 'nullable': False
+  9. 'TD_ENTRY_AGE_DAYS2' (NUMBER):- field name for Upper Age Limit for Yellow Bar,  'precision': 3, 'nullable': False
+  10. 'ACCESS_GRP_CD' (CHAR):- field name for Access Group,  'precision': None, 'nullable': False
+  11. 'EMAILID' (VARCHAR2):- field name for Email Address,  'precision': None, 'nullable': False
+  12. 'USER_TYPE_FLG' (CHAR):- field name for User Type,  'precision': None, 'nullable': False, 'values': TMPL
+  13. 'PORTAL_OVRD_USER' (CHAR):- field name for Portals Profile User,  'precision': None, 'nullable': False
+  14. 'FAV_OVRD_USER' (CHAR):- field name for Favorites Profile User,  'precision': None, 'nullable': False
+  15. 'DASHBOARD_WIDTH' (VARCHAR2):- field name for Dashboard Width,  'precision': None, 'nullable': False
+  16. 'HOME_NAV_OPT_CD' (CHAR):- field name for Home Page,  'precision': None, 'nullable': False
+  17. 'DISP_ALL_PREM_SW' (CHAR):- field name for Display All Premises,  'precision': None, 'nullable': False
+  18. 'OWNER_FLG' (CHAR):- field name for Owner,  'precision': None, 'nullable': False, 'values': W1  , D3  , D7  , DG  , D5  , D4  , D8  , UM  , D6  , F1  , CM  , D1  , X1  , C1  , D2  
+  19. 'TIME_ZONE_CD' (CHAR):- field name for Time Zone,  'precision': None, 'nullable': False
+  20. 'EXT_USER_ID' (VARCHAR2):- field name for External User Id,  'precision': None, 'nullable': False
+  21. 'USER_ENABLE_FLG' (CHAR):- field name for User Enable,  'precision': None, 'nullable': False, 'values': ENBL, DSBL
+  22. 'F1_SECURITY_HASH' (VARCHAR2):- field name for F1_SECURITY_HASH,  'precision': None, 'nullable': False
+  23. 'DASHBOARD_LOC_FLG' (CHAR):- field name for Dashboard Location,  'precision': None, 'nullable': False, 'values': F1DR, F1DL
+  24. 'DASHBOARD_STATE_FLG' (CHAR):- field name for Dashboard State,  'precision': None, 'nullable': False, 'values': F1DC, F1DO
+
+The child tables of 'SC_USER' are ['CI_USR_ZONE', 'CI_USR_SCR', 'CI_DAR_USR', 'CI_USR_NAV_LINK', 'CI_ROLE_USER', 'SC_USER_CHAR', 'CI_USR_PORTAL']. 
+(Generated when 'MAINT_OBJ_CD'=USER-SC)
+
+---------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+Table 'CI_USR_ZONE' is used for storing User Zone. Table 'CI_USR_ZONE' has 9 fields (columns) which are:  1. 'USER_ID' 2. 'PORTAL_CD' 3. 'ZONE_CD' 4. 'SORT_SEQ' 5. 'VERSION' 6. 'ZONE_COLLAPSED_SW' 7. 'DISPLAY_SW' 8. 'ZONE_REFRESH_PERIOD' 9. 'ZONE_DATA_AREA'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'USER_ID'  2. 'ZONE_CD'  3. 'PORTAL_CD' . 
+Table 'CI_USR_ZONE' has 2 foreign keys as listed:  'ZONE_CD' is foreign key from table 'CI_PORTAL_ZONE', and 'PORTAL_CD' is foreign key from table 'CI_USR_PORTAL'.
+'CI_USR_ZONE' is a child table of 'SC_USER' table.
+
+Field Descriptions for table 'CI_USR_ZONE':
+
+  1. 'USER_ID' (CHAR):- field name for User,  'precision': None, 'nullable': False
+  2. 'PORTAL_CD' (CHAR):- field name for Portal,  'precision': None, 'nullable': False
+  3. 'ZONE_CD' (CHAR):- field name for Zone,  'precision': None, 'nullable': False
+  4. 'SORT_SEQ' (NUMBER):- field name for Sequence,  'precision': 2, 'nullable': False
+  5. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  6. 'ZONE_COLLAPSED_SW' (CHAR):- field name for Initially Collapsed,  'precision': None, 'nullable': False
+  7. 'DISPLAY_SW' (CHAR):- field name for Display,  'precision': None, 'nullable': False
+  8. 'ZONE_REFRESH_PERIOD' (NUMBER):- field name for Refresh Seconds,  'precision': 5, 'nullable': False
+  9. 'ZONE_DATA_AREA' (CLOB):- field name for Zone Data Area,  'precision': None, 'nullable': True
+
+--------------------------------------------------------------------------
+
+Table 'CI_USR_SCR' is used for storing User Scripts. Table 'CI_USR_SCR' has 4 fields (columns) which are:  1. 'USER_ID' 2. 'SCR_CD' 3. 'VERSION' 4. 'SORT_SEQ'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'USER_ID'  2. 'SCR_CD' . 
+Table 'CI_USR_SCR' has 2 foreign keys as listed:  'USER_ID' is foreign key from table 'SC_USER', and 'SCR_CD' is foreign key from table 'CI_SCR'.
+'CI_USR_SCR' is a child table of 'SC_USER' table.
+
+Field Descriptions for table 'CI_USR_SCR':
+
+  1. 'USER_ID' (CHAR):- field name for User,  'precision': None, 'nullable': False
+  2. 'SCR_CD' (CHAR):- field name for Script,  'precision': None, 'nullable': False
+  3. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  4. 'SORT_SEQ' (NUMBER):- field name for Sequence,  'precision': 2, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'CI_DAR_USR' is used for storing Data Access User. Table 'CI_DAR_USR' has 4 fields (columns) which are:  1. 'DAR_CD' 2. 'USER_ID' 3. 'EXPIRE_DT' 4. 'VERSION'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'DAR_CD'  2. 'USER_ID' . 
+Table 'CI_DAR_USR' has 2 foreign keys as listed:  'DAR_CD' is foreign key from table 'CI_DAR', and 'USER_ID' is foreign key from table 'SC_USER'.
+'CI_DAR_USR' is a child table of 'SC_USER' table.
+
+Field Descriptions for table 'CI_DAR_USR':
+
+  1. 'DAR_CD' (CHAR):- field name for Data Access Role,  'precision': None, 'nullable': False
+  2. 'USER_ID' (CHAR):- field name for User,  'precision': None, 'nullable': False
+  3. 'EXPIRE_DT' (DATE):- field name for Expire Date,  'precision': None, 'nullable': True
+  4. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'CI_USR_NAV_LINK' is used for storing User Favorite Links. Table 'CI_USR_NAV_LINK' has 4 fields (columns) which are:  1. 'USER_ID' 2. 'NAV_OPT_CD' 3. 'SORT_SEQ' 4. 'VERSION'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'USER_ID'  2. 'NAV_OPT_CD' . 
+Table 'CI_USR_NAV_LINK' has 2 foreign keys as listed:  'NAV_OPT_CD' is foreign key from table 'CI_NAV_OPT', and 'USER_ID' is foreign key from table 'SC_USER'.
+'CI_USR_NAV_LINK' is a child table of 'SC_USER' table.
+
+Field Descriptions for table 'CI_USR_NAV_LINK':
+
+  1. 'USER_ID' (CHAR):- field name for User,  'precision': None, 'nullable': False
+  2. 'NAV_OPT_CD' (CHAR):- field name for Navigation Option,  'precision': None, 'nullable': False
+  3. 'SORT_SEQ' (NUMBER):- field name for Sequence,  'precision': 2, 'nullable': False
+  4. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'CI_ROLE_USER' is used for storing Role User. Table 'CI_ROLE_USER' has 3 fields (columns) which are:  1. 'ROLE_ID' 2. 'USER_ID' 3. 'VERSION'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'ROLE_ID'  2. 'USER_ID' . 
+Table 'CI_ROLE_USER' has 2 foreign keys as listed:  'USER_ID' is foreign key from table 'SC_USER', and 'ROLE_ID' is foreign key from table 'CI_ROLE'.
+'CI_ROLE_USER' is a child table of 'SC_USER' table.
+
+Field Descriptions for table 'CI_ROLE_USER':
+
+  1. 'ROLE_ID' (CHAR):- field name for To Do Role,  'precision': None, 'nullable': False
+  2. 'USER_ID' (CHAR):- field name for User,  'precision': None, 'nullable': False
+  3. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'SC_USER_CHAR' is used for storing User Characteristic. Table 'SC_USER_CHAR' has 12 fields (columns) which are:  1. 'USER_ID' 2. 'CHAR_TYPE_CD' 3. 'SEQ_NUM' 4. 'CHAR_VAL' 5. 'ADHOC_CHAR_VAL' 6. 'CHAR_VAL_FK1' 7. 'CHAR_VAL_FK2' 8. 'CHAR_VAL_FK3' 9. 'CHAR_VAL_FK4' 10. 'CHAR_VAL_FK5' 11. 'SRCH_CHAR_VAL' 12. 'VERSION'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'SEQ_NUM'  2. 'USER_ID'  3. 'CHAR_TYPE_CD' . 
+Table 'SC_USER_CHAR' has 3 foreign keys as listed:  'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_VAL', 'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_TYPE', and 'USER_ID' is foreign key from table 'SC_USER'.
+'SC_USER_CHAR' is a child table of 'SC_USER' table.
+
+Field Descriptions for table 'SC_USER_CHAR':
+
+  1. 'USER_ID' (CHAR):- field name for User,  'precision': None, 'nullable': False
+  2. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type,  'precision': None, 'nullable': False
+  3. 'SEQ_NUM' (NUMBER):- field name for Sequence,  'precision': 3, 'nullable': False
+  4. 'CHAR_VAL' (CHAR):- field name for Characteristic Value,  'precision': None, 'nullable': False
+  5. 'ADHOC_CHAR_VAL' (VARCHAR2):- field name for Adhoc Characteristic Value,  'precision': None, 'nullable': False
+  6. 'CHAR_VAL_FK1' (VARCHAR2):- field name for Characteristic Value FK 1,  'precision': None, 'nullable': False
+  7. 'CHAR_VAL_FK2' (VARCHAR2):- field name for Characteristic Value FK 2,  'precision': None, 'nullable': False
+  8. 'CHAR_VAL_FK3' (VARCHAR2):- field name for Characteristic Value FK 3,  'precision': None, 'nullable': False
+  9. 'CHAR_VAL_FK4' (VARCHAR2):- field name for Characteristic Value FK 4,  'precision': None, 'nullable': False
+  10. 'CHAR_VAL_FK5' (VARCHAR2):- field name for Characteristic Value FK 5,  'precision': None, 'nullable': False
+  11. 'SRCH_CHAR_VAL' (VARCHAR2):- field name for Search Characteristic Value,  'precision': None, 'nullable': False
+  12. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'CI_USR_PORTAL' is used for storing User Portal. Table 'CI_USR_PORTAL' has 3 fields (columns) which are:  1. 'USER_ID' 2. 'PORTAL_CD' 3. 'VERSION'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'PORTAL_CD'  2. 'USER_ID' . 
+Table 'CI_USR_PORTAL' has 2 foreign keys as listed:  'USER_ID' is foreign key from table 'SC_USER', and 'PORTAL_CD' is foreign key from table 'CI_PORTAL'.
+'CI_USR_PORTAL' is a child table of 'SC_USER' table.
+
+Field Descriptions for table 'CI_USR_PORTAL':
+
+  1. 'USER_ID' (CHAR):- field name for User,  'precision': None, 'nullable': False
+  2. 'PORTAL_CD' (CHAR):- field name for Portal,  'precision': None, 'nullable': False
+  3. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+---------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+Table 'CI_CHAR_TYPE' is used for storing Characteristic Type. Table 'CI_CHAR_TYPE' has 9 fields (columns) which are:  1. 'CHAR_TYPE_CD' 2. 'FK_REF_CD' 3. 'ADHOC_VAL_ALG_CD' 4. 'CHAR_TYPE_FLG' 5. 'VERSION' 6. 'SEARCH_FLG' 7. 'OWNER_FLG' 8. 'CUSTOM_SW' 9. 'FLD_NAME'. Out of these fields, only one is a primary key; 'CHAR_TYPE_CD' is the primary key for 'CI_CHAR_TYPE'. 
+Table 'CI_CHAR_TYPE' has 2 foreign keys as listed:  'FK_REF_CD' is foreign key from table 'CI_FK_REF', and 'ADHOC_VAL_ALG_CD' is foreign key from table 'CI_ALG'.
+'CI_CHAR_TYPE' is a Primary Table.
+
+Field Descriptions for table 'CI_CHAR_TYPE':
+
+  1. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type,  'precision': None, 'nullable': False
+  2. 'FK_REF_CD' (CHAR):- field name for FK Reference Code,  'precision': None, 'nullable': False
+  3. 'ADHOC_VAL_ALG_CD' (CHAR):- field name for Algorithm,  'precision': None, 'nullable': False
+  4. 'CHAR_TYPE_FLG' (CHAR):- field name for Type of Char Value,  'precision': None, 'nullable': False, 'values': ADV , DFV , FKV , FLV 
+  5. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  6. 'SEARCH_FLG' (CHAR):- field name for Allow Search by Value,  'precision': None, 'nullable': False, 'values': ALWD, NALW
+  7. 'OWNER_FLG' (CHAR):- field name for Owner,  'precision': None, 'nullable': False, 'values': W1  , D3  , D7  , DG  , D5  , D4  , D8  , UM  , D6  , F1  , CM  , D1  , X1  , C1  , D2  
+  8. 'CUSTOM_SW' (CHAR):- field name for Custom,  'precision': None, 'nullable': False
+  9. 'FLD_NAME' (CHAR):- field name for Field,  'precision': None, 'nullable': False
+
+The child tables of 'CI_CHAR_TYPE' are ['CI_CHAR_ENTITY', 'CI_CHAR_VAL', 'CI_CHAR_TYPE_L', 'CI_CHAR_VAL_L']. 
+(Generated when 'MAINT_OBJ_CD'=CHAR TYPE)
+
+---------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+Table 'CI_CHAR_ENTITY' is used for storing Characteristic Type Entity. Table 'CI_CHAR_ENTITY' has 4 fields (columns) which are:  1. 'CHAR_ENTITY_FLG' 2. 'CHAR_TYPE_CD' 3. 'VERSION' 4. 'OWNER_FLG'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'CHAR_ENTITY_FLG'  2. 'CHAR_TYPE_CD' . 
+Table 'CI_CHAR_ENTITY' has only one foreign key; 'CHAR_TYPE_CD' is a foreign key from table 'CI_CHAR_TYPE'.
+'CI_CHAR_ENTITY' is a child table of 'CI_CHAR_TYPE' table.
+
+Field Descriptions for table 'CI_CHAR_ENTITY':
+
+  1. 'CHAR_ENTITY_FLG' (CHAR):- field name for Characteristic Entity,  'precision': None, 'nullable': False, 'values': W1RH, W1RG, W1AE, W1EM, W1EL, W1RE, W1AC, W1MB, W1MA, W1DO, W1QH, W1UO, W1MF, W1DT, W1ME, W1QM, F1EC, F1KL, CMIL, CMIM, CMOL, CMOM, CMRP, W1MD, W1QL, W1UT, W1MC, W1US, W1MJ, W1IA, W1MI, W1MH, W1MG, W1MN, W1IE, W1MM, W1ID, W1ML, W1AJ, W1SZ, W1JG, W1SO, W1SU, W1SQ, W1JM, F1KG, F1KC, F1OG, F1OM, F1IM, F1KE, F1KM, F1KP, F1KT, F1IG, F1EG, C1PD, C1RP, C1CM, C1SL, C1SC, W1QT, W1IC, W1LQ, W1LP, W1PX, W1HL, W1LT, W1DC, W1LR, W1UC, W1DA, W1QB, W1QA, W1DG, C1MK, C1SG, C1WU, C1NL, C1PO, C1PC, C1CN, C1WA, C1SV, C1RO, C1VL, C1PV, C1SI, C1ST, C1CC, C1SQ, C1SE, D1IG, D1IS, C1SF, C1SH, C1SJ, C1SU, W1UG, W1DE, W1UN, W1DL, W1UL, W1QC, W1CO, W1PH, W1TP, W1CN, W1PG, W1CM, W1GT, W1DS, W1XP, W1DF, W1VC, W1DB, W1HD, W1BD, W1PY, W1NO, W1PF, W1DM, W1PB, W1CL, W1TM, W1CS, W1LD, W1PL, W1CR, W1LC, W1TS, W1CQ, W1LB, W1PJ, W1TR, W1CP, W1PI, W1CW, W1CV, W1LG, W1PO, W1OG, W1PS, W1QR, W1VG, W1TW, W1CU, W1PN, W1CT, W1LE, W1PM, W1PU, W1LL, W1PT, W1CZ, W1CY, W1PR, W1CX, W1TE, W1DQ, W1OT, W1GC, W1TD, W1CB, W1TC, W1CA, W1TA, W1CF, W1TG, W1CE, W1CD, W1CC, F1AM, C1SS, C1SO, F1IT, W1CK, W1PD, W1TL, W1CJ, D1UC, F1CG, D1SQ, W1PC, W1TK, W1CI, W1CH, W1CG, D1AV, D1AR, D1AD, D1MW, D1MU, D1DN, W1BM, W1SN, W1BL, W1FT, W1SM, W1OD, W1SL, W1WT, W1FR, W1OC, W1SK, W1SR, W1WY, W1OH, W1SP, W1BN, W1FV, C1PR, C1PL, C1PA, W1BU, W1SV, W1BT, W1OL, W1ST, W1BR, W1SS, W1BY, W1SY, W1SX, W1SW, W1WF, W1JL, W1NT, W1WE, W1FC, W1WD, W1AY, W1FB, W1WC, W1SB, W1SA, W1FF, W1WG, W1FE, W1FM, W1SF, W1FL, W1JT, W1SE, W1BC, W1SD, F1PS, F1PF, W1WL, W1BB, W1SC, W1WK, W1BA, W1SJ, W1WR, W1BH, W1VR, W1EP, W1RI, W1AO, W1RP, W1AN, W1RO, W1AM, W1EU, W1RN, W1AL, W1ET, W1AS, W1NL, W1RT, W1AR, W1RS, W1AQ, W1EY, W1FP, W1SI, W1BG, W1FO, W1SH, W1WP, W1FN, W1SG, W1WO, W1ND, W1RL, W1AI, W1EQ, W1RR, W1AP, W1EX, W1WB, W1WA, W1RW, W1AT, W1RU, W1MS, W1MR, W1II, W1MQ, C1PM, C1PU, C1MS, C1PN, C1PX, C1MP, C1PP, C1PW, C1TR, D1RP, D1RO, W1IH, W1MP, W1IG, W1MO, W1MW, W1MV, W1MU, W1ED, W1IL, W1MT, W1EC, W1VL, W1AA, W1EI, W1EG, W1AG, W1AD, W1PP, W1HP, W1PA, W1AB, W1PE, C1MC, C1SK, SCM , SLOC, D1DI, C1NP, TOS , SP  , ASTC, C1DR, UA  , C1NT, WFPR, C1PE, SATY, D1CO, D1BC, D1DC, D1DE, D1TG, D1TL, D1FV, F1OR, F1RS, F1MT, F1BT, PERS, D1CL, D1CM, D1UP, D1EW, D1EV, D1NW, D1EX, D1UR, D1ET, D1US, D1CI, CTCT, DTYP, F1OL, F1WS, F1SR, NUS , F1SS, F1TD, F1AT, PREM, C1PY, D1RL, D1TM, C1TC, TSCE, C1TD, C1DC, C1UG, C1LE, DIST, C1LD, C1RC, BSCL, C1RG, BCHG, D1DX, D1DO, D1MY, D1DP, D1IE, RE  , BCTL, F1SA, F1SC, F1BN, F1TL, D1MK, CASE, C1IC, D1FT, D1VE, D1FS, D1TT, D1RT, ADJ , ACCT, F1PT, F1ST, F1AR, F1FC, BILL, FA  , BFAC, C1AQ, C1AR, D1DS, C1TL, C1TM, F1GA, ITTY, DTST, C1OC, C1UL, C1LL, F1MD, F1SG, F1GL, D1DT, D1DL, D1DV, D1MT, D1MR, D1MS, D1CT, D1AL, D1CU, D1SR, D1DA, METR, C1OL, C1PT, WFEV, D1TY, F1SE, D1AX, D1MF, D1CY, D1GL, D1MG, D1OL, D1ME, C1MR, D1UT, D1SC, D1UE, D1CE, D1FC, D1UG, D1FL, D1NL, D1PL, F1IW, SASP, C1EL, C1MT, C1MU, C1AL, F1SI, F1SK, F1US, F1SL, C1CO, F1SY, F1PL, F1NL, C1CG, C1LG, COPT, C1RR, C1IT, COEV, C1QL, SA  , D1MP, D1CX, C1L1, C1CL, C1SR, FATY, C1CT, C1CR, C1TT, C1LT, CDIV, C1RT, SPTY, ENRO, ITEM, C1IR, D1GR, D1SP, D1IL, D1EL, D1IM, D1AT, D1CS, D1ML, D1ST, D1UX, MTTY, ODLG, D1PM, W1EO, C1IL, C1RL, C1RQ, D1CB, D1AC, D1CA, D1UL, D1SL, D1CN, D1AG, D1MC, D1XT, D1UA, D1TD, F1DT, F1MC, F1DM, F1RL, F1RM, D1PS, D1PR, D1CR, D1CP, D1MA, D1SD, D1MO, RPT , F1WL, NDS , F1EL, F1FL, F1TY, F1RQ, F1IL, F1BL, F1MO, TODO, F1BF, F1RT, D1KL, D1MD, D1SU, D1CK, D1MV, D2OM, D2MM, F1CL, F1OE, C1CP, RC  , ODPT, C1TY, ADJT
+  2. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type,  'precision': None, 'nullable': False
+  3. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  4. 'OWNER_FLG' (CHAR):- field name for Owner,  'precision': None, 'nullable': False, 'values': W1  , D3  , D7  , DG  , D5  , D4  , D8  , UM  , D6  , F1  , CM  , D1  , X1  , C1  , D2  
+
+--------------------------------------------------------------------------
+
+Table 'CI_CHAR_VAL' is used for storing Characteristic Type Value. Table 'CI_CHAR_VAL' has 4 fields (columns) which are:  1. 'VERSION' 2. 'OWNER_FLG' 3. 'CHAR_TYPE_CD' 4. 'CHAR_VAL'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'CHAR_VAL'  2. 'CHAR_TYPE_CD' . 
+Table 'CI_CHAR_VAL' has only one foreign key; 'CHAR_TYPE_CD' is a foreign key from table 'CI_CHAR_TYPE'.
+'CI_CHAR_VAL' is a child table of 'CI_CHAR_TYPE' table.
+
+Field Descriptions for table 'CI_CHAR_VAL':
+
+  1. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  2. 'OWNER_FLG' (CHAR):- field name for Owner,  'precision': None, 'nullable': False, 'values': W1  , D3  , D7  , DG  , D5  , D4  , D8  , UM  , D6  , F1  , CM  , D1  , X1  , C1  , D2  
+  3. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type,  'precision': None, 'nullable': False
+  4. 'CHAR_VAL' (CHAR):- field name for Characteristic Value,  'precision': None, 'nullable': False
+
+--------------------------------------------------------------------------
+
+Table 'CI_CHAR_TYPE_L' is used for storing Characteristic Type Language. Table 'CI_CHAR_TYPE_L' has 5 fields (columns) which are:  1. 'CHAR_TYPE_CD' 2. 'LANGUAGE_CD' 3. 'DESCR' 4. 'VERSION' 5. 'OWNER_FLG'. Out of these fields, 2 are primary keys. The composite primary keys are:  1. 'CHAR_TYPE_CD'  2. 'LANGUAGE_CD' . 
+Table 'CI_CHAR_TYPE_L' has 2 foreign keys as listed:  'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE', and 'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_TYPE'.
+'CI_CHAR_TYPE_L' is a child table of 'CI_CHAR_TYPE' table.
+
+Field Descriptions for table 'CI_CHAR_TYPE_L':
+
+  1. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type,  'precision': None, 'nullable': False
+  2. 'LANGUAGE_CD' (CHAR):- field name for Language,  'precision': None, 'nullable': False, 'values': INE , JPN , UKE , FRA , POR , CFR , GER , DUT , CNE , ESP , ENG 
+  3. 'DESCR' (VARCHAR2):- field name for Description,  'precision': None, 'nullable': False
+  4. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  5. 'OWNER_FLG' (CHAR):- field name for Owner,  'precision': None, 'nullable': False, 'values': W1  , D3  , D7  , DG  , D5  , D4  , D8  , UM  , D6  , F1  , CM  , D1  , X1  , C1  , D2  
+
+--------------------------------------------------------------------------
+
+Table 'CI_CHAR_VAL_L' is used for storing Characteristic Type Value Language. Table 'CI_CHAR_VAL_L' has 6 fields (columns) which are:  1. 'CHAR_TYPE_CD' 2. 'CHAR_VAL' 3. 'LANGUAGE_CD' 4. 'DESCR' 5. 'VERSION' 6. 'OWNER_FLG'. Out of these fields, 3 are primary keys. The composite primary keys are:  1. 'LANGUAGE_CD'  2. 'CHAR_TYPE_CD'  3. 'CHAR_VAL' . 
+Table 'CI_CHAR_VAL_L' has 2 foreign keys as listed:  'LANGUAGE_CD' is foreign key from table 'CI_LANGUAGE', and 'CHAR_TYPE_CD' is foreign key from table 'CI_CHAR_VAL'.
+'CI_CHAR_VAL_L' is a child table of 'CI_CHAR_TYPE' table.
+
+Field Descriptions for table 'CI_CHAR_VAL_L':
+
+  1. 'CHAR_TYPE_CD' (CHAR):- field name for Characteristic Type,  'precision': None, 'nullable': False
+  2. 'CHAR_VAL' (CHAR):- field name for Characteristic Value,  'precision': None, 'nullable': False
+  3. 'LANGUAGE_CD' (CHAR):- field name for Language,  'precision': None, 'nullable': False, 'values': INE , JPN , UKE , FRA , POR , CFR , GER , DUT , CNE , ESP , ENG 
+  4. 'DESCR' (VARCHAR2):- field name for Description,  'precision': None, 'nullable': False
+  5. 'VERSION' (NUMBER):- field name for Version,  'precision': 5, 'nullable': False
+  6. 'OWNER_FLG' (CHAR):- field name for Owner,  'precision': None, 'nullable': False, 'values': W1  , D3  , D7  , DG  , D5  , D4  , D8  , UM  , D6  , F1  , CM  , D1  , X1  , C1  , D2  

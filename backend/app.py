@@ -8,8 +8,49 @@ import threading
 import time
 import os
 
+import logging
+
+# Create a logger for app.py
+app_logger = logging.getLogger("app_logger")
+app_logger.setLevel(logging.INFO)
+
+# Create a file handler for app.py
+app_handler = logging.FileHandler("app_py_logs.log")  # Log file for app.py
+app_handler.setLevel(logging.INFO)
+
+# Set formatter
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+app_handler.setFormatter(formatter)
+
+# Add handler to logger
+app_logger.addHandler(app_handler)
+
+# Prevent duplicate logs
+app_logger.propagate = False
+
+# Example log entry
+app_logger.info("Server started now")
+
+
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# Check if the API key is loaded
+api_key = os.getenv("CALENDARIFIC_API_KEY")
+
+if api_key:
+    print(f"✅ API Key Loaded Successfully: {api_key[:4]}****")
+else:
+    print("❌ API Key Not Found! Check your .env file.")
+
 #Change query function here
-from query_faiss import query_rag
+#from query_faiss import query_rag
+from chatbot_2 import query_rag, load_faiss, query_with_object_routing
+
+# Ensure FAISS indices are loaded before accessing `db_tbl`
+load_faiss()
 
 app = Flask(__name__)
 cors=CORS(app)
@@ -72,13 +113,23 @@ def message(data):
     user["query"]=data["query"] if len(data["query"])<13 else data["query"][:9]+"..." 
 
     #Also change query function here
-    [response,sources]=(query_rag(data["query"],str(data["history"]),int(data["chatType"])))
+
+    if int(data["chatType"]) == 2:
+        [response,sources]=(query_with_object_routing(data["query"],int(data["chatType"]),str(data["history"])))
+        app_logger.info(f"Response received in app.py: {response}")
+        app_logger.info(f"Sources received in app.py: {sources}")
+    else:
+        [response,sources]=(query_rag(data["query"],int(data["chatType"]),str(data["history"])))
+        app_logger.info(f"Response of query rag received in app.py: {response}")
+        app_logger.info(f"Sources of query rag received in app.py: {sources}")
 
     user["response"]=response[:9] + "..."
     user["request"]="completed"
     log={"query":data["query"],"response":response,"reference":sources,"time":str(datetime.now()-dtime)}
     LOGS.append(f"{curtime} | [QRY] | user {ipadress} @ {user['agent']} | {log}")
     emit("response",{"response":response,"query":data["query"],"reference":sources,"chatIndex":data["chatIndex"]},broadcast=False)
+    app_logger.info("Emitting response to frontend.")
+
 
 @socketio.on("disconnect")
 def disconnected():
@@ -141,7 +192,7 @@ t2.daemon=True
 t2.start()
 t1.start()
 if (__name__ == '__main__'):
-    socketio.run(app,host="0.0.0.0")
+    socketio.run(app,host="0.0.0.0", port=5000, allow_unsafe_werkzeug=True, use_reloader=False)
 
 
 

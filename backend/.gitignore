@@ -1,0 +1,10 @@
+*.pyc
+.DS_Store
+backup
+images
+# data
+app.log*
+file_structures
+data.json
+.env
+.scannerwork
